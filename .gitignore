@@ -39,7 +39,7 @@ public/uploads
 /node_modules
 /yarn-error.log
 yarn-debug.log*
-.yarn-integrity
+.yarn*
 
 .rbenv-vars
 public/decidim-packs
