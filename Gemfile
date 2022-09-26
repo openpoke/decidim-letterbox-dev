@@ -4,7 +4,7 @@ source "https://rubygems.org"
 
 ruby RUBY_VERSION
 
-DECIDIM_VERSION="0.26.2"
+DECIDIM_VERSION = { git: "https://github.com/openpoke/decidim", branch: "0.26-lucerne" }
 
 gem "decidim", DECIDIM_VERSION
 # gem "decidim-conferences", git: "https://github.com/decidim/decidim.git", branch: "develop"
@@ -12,6 +12,9 @@ gem "decidim", DECIDIM_VERSION
 # gem "decidim-elections", git: "https://github.com/decidim/decidim.git", branch: "develop"
 # gem "decidim-initiatives", git: "https://github.com/decidim/decidim.git", branch: "develop"
 # gem "decidim-templates", git: "https://github.com/decidim/decidim.git", branch: "develop"
+
+gem "decidim-decidim_awesome", git: "https://github.com/openpoke/decidim-module-decidim_awesome", branch: "feat/etiquette-rules"
+gem 'decidim-reporting_proposals', git: "https://github.com/openpoke/decidim-module-reporting-proposals"
 
 gem "bootsnap", "~> 1.7"
 
