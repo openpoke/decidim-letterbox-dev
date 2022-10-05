@@ -184,7 +184,7 @@ GIT
 
 GIT
   remote: https://github.com/openpoke/decidim-module-reporting-proposals
-  revision: 0dc4acbc1f456105a4eddc58e3fb114de9cfbf0d
+  revision: 530e744b0aa4cebf1f313b7d44b4356800765505
   specs:
     decidim-reporting_proposals (0.1.0)
       decidim-core (>= 0.25.0, < 0.27)
@@ -257,8 +257,8 @@ GEM
       public_suffix (>= 2.0.2, < 6.0)
     ast (2.4.2)
     aws-eventstream (1.2.0)
-    aws-partitions (1.639.0)
-    aws-sdk-core (3.157.0)
+    aws-partitions (1.642.0)
+    aws-sdk-core (3.158.0)
       aws-eventstream (~> 1, >= 1.0.2)
       aws-partitions (~> 1, >= 1.525.0)
       aws-sigv4 (~> 1.1)
@@ -270,9 +270,9 @@ GEM
       aws-sdk-core (~> 3, >= 3.127.0)
       aws-sdk-kms (~> 1)
       aws-sigv4 (~> 1.4)
-    aws-sigv4 (1.5.1)
+    aws-sigv4 (1.5.2)
       aws-eventstream (~> 1, >= 1.0.2)
-    axe-core-api (4.4.1)
+    axe-core-api (4.4.2)
       dumb_delegator
       virtus
     axe-core-rspec (4.1.0)
@@ -406,7 +406,7 @@ GEM
       railties (>= 3.0.0)
     faker (2.23.0)
       i18n (>= 1.8.11, < 2)
-    faraday (2.5.2)
+    faraday (2.6.0)
       faraday-net_http (>= 2.0, < 3.1)
       ruby2_keywords (>= 0.0.4)
     faraday-net_http (3.0.0)
@@ -590,7 +590,7 @@ GEM
       rack (>= 1.0, < 3)
     rack-cors (1.1.1)
       rack (>= 2.0.0)
-    rack-protection (3.0.1)
+    rack-protection (3.0.2)
       rack
     rack-proxy (0.7.4)
       rack
@@ -804,7 +804,7 @@ GEM
     wkhtmltopdf-binary (0.12.6.5)
     xpath (3.2.0)
       nokogiri (~> 1.8)
-    zeitwerk (2.6.0)
+    zeitwerk (2.6.1)
 
 PLATFORMS
   ruby
