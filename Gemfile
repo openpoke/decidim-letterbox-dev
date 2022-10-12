@@ -7,11 +7,11 @@ ruby RUBY_VERSION
 DECIDIM_VERSION = { git: "https://github.com/openpoke/decidim", branch: "0.26-lucerne" }
 
 gem "decidim", DECIDIM_VERSION
-# gem "decidim-conferences", git: "https://github.com/decidim/decidim.git", branch: "develop"
-# gem "decidim-consultations", git: "https://github.com/decidim/decidim.git", branch: "develop"
-# gem "decidim-elections", git: "https://github.com/decidim/decidim.git", branch: "develop"
-# gem "decidim-initiatives", git: "https://github.com/decidim/decidim.git", branch: "develop"
-# gem "decidim-templates", git: "https://github.com/decidim/decidim.git", branch: "develop"
+# gem "decidim-conferences", DECIDIM_VERSION
+# gem "decidim-consultations", DECIDIM_VERSION
+# gem "decidim-elections", DECIDIM_VERSION
+# gem "decidim-initiatives", DECIDIM_VERSION
+gem "decidim-templates", DECIDIM_VERSION
 
 gem "decidim-decidim_awesome", git: "https://github.com/openpoke/decidim-module-decidim_awesome", branch: "feat/etiquette-rules"
 gem 'decidim-reporting_proposals', git: "https://github.com/openpoke/decidim-module-reporting-proposals"

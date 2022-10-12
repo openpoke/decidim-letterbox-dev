@@ -1051,11 +1051,11 @@
 
 "@decidim/browserslist-config@file:packages/browserslist-config":
   "resolved" "file:packages/browserslist-config"
-  "version" "0.26.2"
+  "version" "0.26.3"
 
 "@decidim/core@file:packages/core":
   "resolved" "file:packages/core"
-  "version" "0.26.2"
+  "version" "0.26.3"
   dependencies:
     "@joeattardi/emoji-button" "^4.6.0"
     "@zeitiger/appendaround" "^1.0.0"
@@ -1109,13 +1109,13 @@
 
 "@decidim/dev@file:packages/dev":
   "resolved" "file:packages/dev"
-  "version" "0.26.2"
+  "version" "0.26.3"
   dependencies:
     "axe-core" "^4.1.4"
 
 "@decidim/elections@file:packages/elections":
   "resolved" "file:packages/elections"
-  "version" "0.26.2"
+  "version" "0.26.3"
   dependencies:
     "@decidim/decidim-bulletin_board" "0.22.3"
     "@decidim/voting_schemes-dummy" "0.22.3"
@@ -1123,11 +1123,11 @@
 
 "@decidim/eslint-config@file:packages/eslint-config":
   "resolved" "file:packages/eslint-config"
-  "version" "0.26.2"
+  "version" "0.26.3"
 
 "@decidim/stylelint-config@file:packages/stylelint-config":
   "resolved" "file:packages/stylelint-config"
-  "version" "0.26.2"
+  "version" "0.26.3"
 
 "@decidim/voting_schemes-dummy@0.22.3":
   "integrity" "sha512-Z5CwSUJNYW2KkoE5anAqAIwHnQHqpgGL4Xu2I7YqEn3thThlbWlY9U9Eq0O6fq7/pfBQLiAFFiBBAnCDv0HC2g=="
@@ -1141,7 +1141,7 @@
 
 "@decidim/webpacker@file:packages/webpacker":
   "resolved" "file:packages/webpacker"
-  "version" "0.26.2"
+  "version" "0.26.3"
   dependencies:
     "@babel/core" "^7.13.13"
     "@babel/eslint-parser" "^7.13.14"
