@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/openpoke/decidim
-  revision: c2460b0959ffb39e7bfab461f47e59b7367d2780
+  revision: 5c07b4aa21512f086d76166707e29cab751d4e21
   branch: 0.26-lucerne
   specs:
     decidim (0.26.3)
@@ -184,11 +184,12 @@ GIT
 
 GIT
   remote: https://github.com/openpoke/decidim-module-reporting-proposals
-  revision: 9439982ec71269a80bf4b3bd97ae2533eb270b0b
+  revision: e7648fcb939eaf1f57306be4f72c0d5ca329418d
   specs:
     decidim-reporting_proposals (0.1.0)
       decidim-core (>= 0.25.0, < 0.27)
       decidim-proposals (>= 0.25.0, < 0.27)
+      deface (>= 1.9)
 
 GEM
   remote: https://rubygems.org/
@@ -257,8 +258,8 @@ GEM
       public_suffix (>= 2.0.2, < 6.0)
     ast (2.4.2)
     aws-eventstream (1.2.0)
-    aws-partitions (1.644.0)
-    aws-sdk-core (3.159.0)
+    aws-partitions (1.649.0)
+    aws-sdk-core (3.163.0)
       aws-eventstream (~> 1, >= 1.0.2)
       aws-partitions (~> 1, >= 1.525.0)
       aws-sigv4 (~> 1.1)
@@ -266,7 +267,7 @@ GEM
     aws-sdk-kms (1.58.0)
       aws-sdk-core (~> 3, >= 3.127.0)
       aws-sigv4 (~> 1.1)
-    aws-sdk-s3 (1.114.0)
+    aws-sdk-s3 (1.115.0)
       aws-sdk-core (~> 3, >= 3.127.0)
       aws-sdk-kms (~> 1)
       aws-sigv4 (~> 1.4)
@@ -329,7 +330,7 @@ GEM
       actionpack (>= 5.0)
       cells (>= 4.1.6, < 5.0.0)
     charlock_holmes (0.7.7)
-    chef-utils (17.10.0)
+    chef-utils (18.0.161)
       concurrent-ruby
     childprocess (3.0.0)
     coercible (1.0.0)
@@ -360,6 +361,12 @@ GEM
     declarative-builder (0.1.0)
       declarative-option (< 0.2.0)
     declarative-option (0.1.0)
+    deface (1.9.0)
+      actionview (>= 5.2)
+      nokogiri (>= 1.6)
+      polyglot
+      railties (>= 5.2)
+      rainbow (>= 2.1.0)
     descendants_tracker (0.0.4)
       thread_safe (~> 0.3, >= 0.3.1)
     devise (4.8.1)
@@ -397,7 +404,7 @@ GEM
     erubi (1.11.0)
     et-orbi (1.2.7)
       tzinfo
-    excon (0.93.0)
+    excon (0.93.1)
     execjs (2.8.1)
     factory_bot (4.11.1)
       activesupport (>= 3.0.0)
@@ -498,7 +505,7 @@ GEM
       mini_mime (>= 0.1.1)
     marcel (1.0.2)
     matrix (0.4.2)
-    mdl (0.11.0)
+    mdl (0.12.0)
       kramdown (~> 2.3)
       kramdown-parser-gfm (~> 1.1)
       mixlib-cli (~> 2.1, >= 2.1.1)
@@ -521,7 +528,7 @@ GEM
     multi_xml (0.6.0)
     mustache (1.1.1)
     nio4r (2.5.8)
-    nokogiri (1.13.8)
+    nokogiri (1.13.9)
       mini_portile2 (~> 2.8.0)
       racc (~> 1.4)
     oauth (1.1.0)
@@ -573,6 +580,7 @@ GEM
     pg_search (2.3.6)
       activerecord (>= 5.2)
       activesupport (>= 5.2)
+    polyglot (0.3.5)
     premailer (1.18.0)
       addressable
       css_parser (>= 1.12.0)
@@ -693,7 +701,7 @@ GEM
       rubocop-ast (>= 0.5.0)
       ruby-progressbar (~> 1.7)
       unicode-display_width (>= 1.4.0, < 2.0)
-    rubocop-ast (1.21.0)
+    rubocop-ast (1.23.0)
       parser (>= 3.1.1.0)
     rubocop-rails (2.9.1)
       activesupport (>= 4.2.0)
