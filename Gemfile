@@ -43,6 +43,6 @@ end
 
 group :production do
   gem 'aws-sdk-s3', require: false
-  gem 'sidekiq'
-  gem 'sidekiq-cron', "~> 1.6.0"
+  gem 'sidekiq', "<7"
+  gem 'sidekiq-cron'
 end
