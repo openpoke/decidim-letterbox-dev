@@ -15,6 +15,7 @@ gem "decidim-templates", DECIDIM_VERSION
 
 gem "decidim-decidim_awesome", git: "https://github.com/openpoke/decidim-module-decidim_awesome", branch: "feat/etiquette-rules"
 gem 'decidim-reporting_proposals', git: "https://github.com/openpoke/decidim-module-reporting-proposals"
+gem 'decidim-term_customizer', git: "https://github.com/mainio/decidim-module-term_customizer"
 
 gem "bootsnap", "~> 1.7"
 
@@ -36,8 +37,8 @@ end
 group :development do
   gem "letter_opener_web", "~> 2.0"
   gem "listen", "~> 3.1"
-  gem "spring", "~> 2.0"
-  gem "spring-watcher-listen", "~> 2.0"
+  gem "spring"
+  gem "spring-watcher-listen"
   gem "web-console", "~> 4.2"
 end
 
