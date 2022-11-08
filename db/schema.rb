@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_11_02_200314) do
+ActiveRecord::Schema.define(version: 2022_11_08_210410) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "ltree"
@@ -1022,6 +1022,20 @@ ActiveRecord::Schema.define(version: 2022_11_02_200314) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["decidim_component_id"], name: "index_decidim_pages_pages_on_decidim_component_id"
+  end
+
+  create_table "decidim_participatory_documents_documents", force: :cascade do |t|
+    t.jsonb "title"
+    t.jsonb "description"
+    t.bigint "decidim_component_id", null: false
+    t.string "decidim_author_type", null: false
+    t.bigint "decidim_author_id", null: false
+    t.bigint "decidim_user_group_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["decidim_author_type", "decidim_author_id"], name: "participatory_documents_document_author_id_and_type"
+    t.index ["decidim_component_id"], name: "participatory_documents_document_decidim_component"
+    t.index ["decidim_user_group_id"], name: "participatory_documents_document_user_group"
   end
 
   create_table "decidim_participatory_process_groups", id: :serial, force: :cascade do |t|

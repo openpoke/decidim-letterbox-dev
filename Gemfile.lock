@@ -8,7 +8,7 @@ GIT
 
 GIT
   remote: https://github.com/openpoke/decidim
-  revision: 5c07b4aa21512f086d76166707e29cab751d4e21
+  revision: d3f570e6ea31f45f2e24d9ad8bea3a174d244e19
   branch: 0.26-lucerne
   specs:
     decidim (0.26.3)
@@ -191,8 +191,16 @@ GIT
       sassc (~> 2.3)
 
 GIT
+  remote: https://github.com/openpoke/decidim-module-participatory-documents
+  revision: 07634c97a2a9ae0a3efdfe4b2901f6e4bac1fbef
+  branch: add-pdfjs-library
+  specs:
+    decidim-participatory_documents (0.1.0)
+      decidim-core (>= 0.25.0, < 0.27)
+
+GIT
   remote: https://github.com/openpoke/decidim-module-reporting-proposals
-  revision: a984e99289ffd66f6da8413a97baf894eeaaca51
+  revision: b24855d65d585bf272a47a36c6230abeb242d5a5
   specs:
     decidim-reporting_proposals (0.1.0)
       decidim-core (>= 0.25.0, < 0.27)
@@ -266,7 +274,7 @@ GEM
       public_suffix (>= 2.0.2, < 6.0)
     ast (2.4.2)
     aws-eventstream (1.2.0)
-    aws-partitions (1.654.0)
+    aws-partitions (1.658.0)
     aws-sdk-core (3.166.0)
       aws-eventstream (~> 1, >= 1.0.2)
       aws-partitions (~> 1, >= 1.651.0)
@@ -281,7 +289,7 @@ GEM
       aws-sigv4 (~> 1.4)
     aws-sigv4 (1.5.2)
       aws-eventstream (~> 1, >= 1.0.2)
-    axe-core-api (4.4.2)
+    axe-core-api (4.5.0)
       dumb_delegator
       virtus
     axe-core-rspec (4.1.0)
@@ -309,7 +317,7 @@ GEM
     browser (2.7.1)
     builder (3.2.4)
     byebug (11.1.3)
-    capybara (3.37.1)
+    capybara (3.38.0)
       addressable
       matrix
       mini_mime (>= 0.1.3)
@@ -412,7 +420,7 @@ GEM
     erubi (1.11.0)
     et-orbi (1.2.7)
       tzinfo
-    excon (0.93.1)
+    excon (0.94.0)
     execjs (2.8.1)
     factory_bot (4.11.1)
       activesupport (>= 3.0.0)
@@ -442,7 +450,7 @@ GEM
       activemodel (>= 4.1, < 7.1)
       activesupport (>= 4.1, < 7.1)
       railties (>= 4.1, < 7.1)
-    fugit (1.7.1)
+    fugit (1.7.2)
       et-orbi (~> 1, >= 1.2.7)
       raabro (~> 1.4)
     geocoder (1.7.5)
@@ -733,8 +741,8 @@ GEM
       rubyzip (>= 1.2.2)
     semantic_range (3.0.0)
     seven_zip_ruby (1.3.0)
-    sidekiq (6.5.7)
-      connection_pool (>= 2.2.5)
+    sidekiq (6.5.8)
+      connection_pool (>= 2.2.5, < 3)
       rack (~> 2.0)
       redis (>= 4.5.0, < 5)
     sidekiq-cron (1.8.0)
@@ -752,10 +760,6 @@ GEM
       version_gem (~> 1.1, >= 1.1.1)
     social-share-button (1.2.4)
       coffee-rails
-    spring (2.1.1)
-    spring-watcher-listen (2.0.1)
-      listen (>= 2.7, < 4.0)
-      spring (>= 1.2, < 3.0)
     sprockets (4.1.1)
       concurrent-ruby (~> 1.0)
       rack (> 1, < 3)
@@ -820,7 +824,7 @@ GEM
     wkhtmltopdf-binary (0.12.6.5)
     xpath (3.2.0)
       nokogiri (~> 1.8)
-    zeitwerk (2.6.4)
+    zeitwerk (2.6.6)
 
 PLATFORMS
   ruby
@@ -834,6 +838,7 @@ DEPENDENCIES
   decidim-decidim_awesome!
   decidim-dev!
   decidim-microsoft
+  decidim-participatory_documents!
   decidim-reporting_proposals!
   decidim-templates!
   decidim-term_customizer!
@@ -843,8 +848,6 @@ DEPENDENCIES
   puma (>= 5.0.0)
   sidekiq (< 7)
   sidekiq-cron
-  spring
-  spring-watcher-listen
   web-console (~> 4.2)
   wicked_pdf (~> 2.1)
 
