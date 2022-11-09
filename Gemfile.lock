@@ -1,12 +1,4 @@
 GIT
-  remote: https://github.com/mainio/decidim-module-term_customizer
-  revision: 9540a2ab20b872896e51ea5f97c5ebae3388ca60
-  specs:
-    decidim-term_customizer (0.26.0)
-      decidim-admin (~> 0.26.0)
-      decidim-core (~> 0.26.0)
-
-GIT
   remote: https://github.com/openpoke/decidim
   revision: 7a91555cfc512caf6a627f1de97368764f1e78f5
   branch: 0.26-lucerne
@@ -843,7 +835,6 @@ DEPENDENCIES
   decidim-participatory_documents!
   decidim-reporting_proposals!
   decidim-templates!
-  decidim-term_customizer!
   faker (~> 2.14)
   letter_opener_web (~> 2.0)
   listen (~> 3.1)
