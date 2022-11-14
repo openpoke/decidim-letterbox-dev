@@ -54,13 +54,15 @@ COPY . /app
 #
 RUN mv config/credentials.yml.enc config/credentials.yml.enc.bak 2>/dev/null || true
 RUN mv config/credentials config/credentials.bak 2>/dev/null || true
+# prevent deface compiling to avoid initialize the database
+RUN sed -ie '/^Rails\.application\.configure/a config.deface.enabled = false' config/environments/production.rb 2>/dev/null || true
 
-RUN DATABASE_URL=nulldb \
-    RAILS_ENV=production \
+RUN RAILS_ENV=production \
     SECRET_KEY_BASE=dummy \
     RAILS_MASTER_KEY=dummy \
     bundle exec rails assets:precompile
 
+RUN sed -ie '/^config\.deface\.enabled = false/d' config/environments/production.rb 2>/dev/null || true
 RUN mv config/credentials.yml.enc.bak config/credentials.yml.enc 2>/dev/null || true
 RUN mv config/credentials.bak config/credentials 2>/dev/null || true
 
