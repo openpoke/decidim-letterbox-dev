@@ -184,7 +184,7 @@ GIT
 
 GIT
   remote: https://github.com/openpoke/decidim-module-participatory-documents
-  revision: 09d192bb1b4b8d043e4d587ffd15b8cd4ce9ca1b
+  revision: 5a75816317ca60593a03186ee5eaa34628faec66
   branch: public-component
   specs:
     decidim-participatory_documents (0.1.0)
@@ -274,13 +274,13 @@ GEM
       public_suffix (>= 2.0.2, < 6.0)
     ast (2.4.2)
     aws-eventstream (1.2.0)
-    aws-partitions (1.667.0)
+    aws-partitions (1.668.0)
     aws-sdk-core (3.168.2)
       aws-eventstream (~> 1, >= 1.0.2)
       aws-partitions (~> 1, >= 1.651.0)
       aws-sigv4 (~> 1.5)
       jmespath (~> 1, >= 1.6.1)
-    aws-sdk-kms (1.59.0)
+    aws-sdk-kms (1.60.0)
       aws-sdk-core (~> 3, >= 3.165.0)
       aws-sigv4 (~> 1.1)
     aws-sdk-s3 (1.117.1)
