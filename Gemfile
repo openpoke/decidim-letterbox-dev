@@ -15,7 +15,7 @@ gem "decidim-templates", DECIDIM_VERSION
 
 gem "decidim-decidim_awesome", git: "https://github.com/openpoke/decidim-module-decidim_awesome", branch: "feat/etiquette-rules"
 gem 'decidim-reporting_proposals', git: "https://github.com/openpoke/decidim-module-reporting-proposals"
-gem 'decidim-participatory_documents', git: "https://github.com/openpoke/decidim-module-participatory-documents", branch: "add-pdfjs-library"
+gem 'decidim-participatory_documents', git: "https://github.com/openpoke/decidim-module-participatory-documents", branch: "public-component"
 gem 'decidim-term_customizer', git: "https://github.com/openpoke/decidim-module-term_customizer"
 
 gem "bootsnap", "~> 1.7"
