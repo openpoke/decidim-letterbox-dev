@@ -184,7 +184,7 @@ GIT
 
 GIT
   remote: https://github.com/openpoke/decidim-module-participatory-documents
-  revision: 5a75816317ca60593a03186ee5eaa34628faec66
+  revision: 1a7f327f953d3f4918a051295eab4cea53cca875
   branch: public-component
   specs:
     decidim-participatory_documents (0.1.0)
@@ -274,7 +274,7 @@ GEM
       public_suffix (>= 2.0.2, < 6.0)
     ast (2.4.2)
     aws-eventstream (1.2.0)
-    aws-partitions (1.668.0)
+    aws-partitions (1.669.0)
     aws-sdk-core (3.168.2)
       aws-eventstream (~> 1, >= 1.0.2)
       aws-partitions (~> 1, >= 1.651.0)
@@ -283,7 +283,7 @@ GEM
     aws-sdk-kms (1.60.0)
       aws-sdk-core (~> 3, >= 3.165.0)
       aws-sigv4 (~> 1.1)
-    aws-sdk-s3 (1.117.1)
+    aws-sdk-s3 (1.117.2)
       aws-sdk-core (~> 3, >= 3.165.0)
       aws-sdk-kms (~> 1)
       aws-sigv4 (~> 1.4)
@@ -720,7 +720,7 @@ GEM
       rubocop-ast (>= 0.5.0)
       ruby-progressbar (~> 1.7)
       unicode-display_width (>= 1.4.0, < 2.0)
-    rubocop-ast (1.23.0)
+    rubocop-ast (1.24.0)
       parser (>= 3.1.1.0)
     rubocop-rails (2.9.1)
       activesupport (>= 4.2.0)
@@ -829,7 +829,7 @@ GEM
       activesupport
     wisper (2.0.1)
     wisper-rspec (1.1.0)
-    wkhtmltopdf-binary (0.12.6.5)
+    wkhtmltopdf-binary (0.12.6.6)
     xpath (3.2.0)
       nokogiri (~> 1.8)
     zeitwerk (2.6.6)
