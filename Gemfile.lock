@@ -184,8 +184,7 @@ GIT
 
 GIT
   remote: https://github.com/openpoke/decidim-module-participatory-documents
-  revision: c9a27571ea0d8686dbbcaff268e09840d50b58cb
-  branch: public-component
+  revision: e2bd6dc466eab5b26cb08400f6e8cf2d9fab3571
   specs:
     decidim-participatory_documents (0.1.0)
       decidim-core (>= 0.25.0, < 0.27)
@@ -275,7 +274,7 @@ GEM
     ast (2.4.2)
     aws-eventstream (1.2.0)
     aws-partitions (1.670.0)
-    aws-sdk-core (3.168.2)
+    aws-sdk-core (3.168.3)
       aws-eventstream (~> 1, >= 1.0.2)
       aws-partitions (~> 1, >= 1.651.0)
       aws-sigv4 (~> 1.5)
@@ -517,8 +516,11 @@ GEM
     loofah (2.3.1)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
-    mail (2.7.1)
+    mail (2.8.0)
       mini_mime (>= 0.1.1)
+      net-imap
+      net-pop
+      net-smtp
     marcel (1.0.2)
     matrix (0.4.2)
     mdl (0.12.0)
@@ -542,7 +544,11 @@ GEM
     msgpack (1.6.0)
     multi_xml (0.6.0)
     mustache (1.1.1)
-    net-protocol (0.1.3)
+    net-imap (0.3.1)
+      net-protocol
+    net-pop (0.1.2)
+      net-protocol
+    net-protocol (0.2.0)
       timeout
     net-smtp (0.3.3)
       net-protocol
@@ -611,7 +617,7 @@ GEM
     puma (5.6.5)
       nio4r (~> 2.0)
     raabro (1.4.0)
-    racc (1.6.0)
+    racc (1.6.1)
     rack (2.2.4)
     rack-attack (6.6.1)
       rack (>= 1.0, < 3)
@@ -783,7 +789,7 @@ GEM
     thor (1.2.1)
     thread_safe (0.3.6)
     tilt (2.0.11)
-    timeout (0.3.0)
+    timeout (0.3.1)
     tomlrb (2.0.3)
     tzinfo (1.2.10)
       thread_safe (~> 0.1)
