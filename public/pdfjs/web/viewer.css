@@ -765,6 +765,13 @@
   --editorInk-editing-cursor: url(images/cursor-editorInk.svg) 0 16, pointer;
 }
 
+@media (-webkit-min-device-pixel-ratio: 1.1), (min-resolution: 1.1dppx) {
+  :root {
+    --editorFreeText-editing-cursor: url(images/cursor-editorFreeText.svg) 0 16,
+      text;
+  }
+}
+
 @media (forced-colors: active) {
   :root {
     --focus-outline: solid 3px ButtonText;
@@ -1270,12 +1277,12 @@ body {
           user-select: none;
 }
 
-.pdfPresentationMode:-webkit-full-screen a:not(.internalLink) {
-  display: none;
+.pdfPresentationMode:-webkit-full-screen section:not([data-internal-link]) {
+  pointer-events: none;
 }
 
-.pdfPresentationMode:fullscreen a:not(.internalLink) {
-  display: none;
+.pdfPresentationMode:fullscreen section:not([data-internal-link]) {
+  pointer-events: none;
 }
 
 .pdfPresentationMode:-webkit-full-screen .textLayer span {
