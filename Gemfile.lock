@@ -184,7 +184,7 @@ GIT
 
 GIT
   remote: https://github.com/openpoke/decidim-module-participatory-documents
-  revision: df39e4156fbf1d13cd7ab528a2ee73e42b44a366
+  revision: 068fff71bcab40646baa9493555575ed485a70ac
   specs:
     decidim-participatory_documents (0.1.0)
       decidim-core (>= 0.25.0, < 0.27)
@@ -273,7 +273,7 @@ GEM
       public_suffix (>= 2.0.2, < 6.0)
     ast (2.4.2)
     aws-eventstream (1.2.0)
-    aws-partitions (1.675.0)
+    aws-partitions (1.677.0)
     aws-sdk-core (3.168.4)
       aws-eventstream (~> 1, >= 1.0.2)
       aws-partitions (~> 1, >= 1.651.0)
@@ -429,7 +429,7 @@ GEM
       railties (>= 3.0.0)
     faker (2.23.0)
       i18n (>= 1.8.11, < 2)
-    faraday (2.7.1)
+    faraday (2.7.2)
       faraday-net_http (>= 2.0, < 3.1)
       ruby2_keywords (>= 0.0.4)
     faraday-net_http (3.0.2)
