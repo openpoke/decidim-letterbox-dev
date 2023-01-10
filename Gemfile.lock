@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/openpoke/decidim
-  revision: 5b6ef60036681e4f13468c06d9683fdfb9605588
+  revision: 8d28c77c60fd6d43da9b1738262a7e7c8f72c663
   branch: 0.26-lucerne
   specs:
     decidim (0.26.4)
@@ -191,10 +191,10 @@ GIT
 
 GIT
   remote: https://github.com/openpoke/decidim-module-reporting-proposals
-  revision: 4d3651d8a013208e3692bdf69d2b55027bb9181c
-  branch: notify-automatic-valuators
+  revision: bb300388437e8424c5866c19e9bb8b8baa3cb603
+  branch: handle-template-responses
   specs:
-    decidim-reporting_proposals (0.1.0)
+    decidim-reporting_proposals (0.2.0)
       decidim-admin (>= 0.25.0, < 0.27)
       decidim-core (>= 0.25.0, < 0.27)
       decidim-participatory_processes (>= 0.25.0, < 0.27)
@@ -276,7 +276,7 @@ GEM
       public_suffix (>= 2.0.2, < 6.0)
     ast (2.4.2)
     aws-eventstream (1.2.0)
-    aws-partitions (1.689.0)
+    aws-partitions (1.690.0)
     aws-sdk-core (3.168.4)
       aws-eventstream (~> 1, >= 1.0.2)
       aws-partitions (~> 1, >= 1.651.0)
@@ -365,7 +365,7 @@ GEM
     crack (0.4.5)
       rexml
     crass (1.0.6)
-    css_parser (1.13.0)
+    css_parser (1.14.0)
       addressable
     date (3.3.3)
     date_validator (0.9.0)
@@ -396,7 +396,7 @@ GEM
       warden (~> 1.2.3)
     devise-i18n (1.10.2)
       devise (>= 4.8.0)
-    devise_invitable (2.0.6)
+    devise_invitable (2.0.7)
       actionmailer (>= 5.0)
       devise (>= 4.6)
     diff-lcs (1.5.0)
@@ -423,7 +423,7 @@ GEM
     erubi (1.12.0)
     et-orbi (1.2.7)
       tzinfo
-    excon (0.96.0)
+    excon (0.97.0)
     execjs (2.8.1)
     factory_bot (4.11.1)
       activesupport (>= 3.0.0)
@@ -514,7 +514,7 @@ GEM
       letter_opener (~> 1.7)
       railties (>= 5.2)
       rexml
-    listen (3.7.1)
+    listen (3.8.0)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
     loofah (2.3.1)
