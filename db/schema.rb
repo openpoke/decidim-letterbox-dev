@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_01_09_133540) do
+ActiveRecord::Schema.define(version: 2023_01_13_142907) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "ltree"
@@ -1026,13 +1026,14 @@ ActiveRecord::Schema.define(version: 2023_01_09_133540) do
 
   create_table "decidim_participatory_documents_annotations", force: :cascade do |t|
     t.bigint "document_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.string "uid"
     t.jsonb "rect", default: {}
     t.integer "page_number", default: 1
-    t.bigint "zone_id"
-    t.string "uid"
-    t.index ["zone_id"], name: "index_decidim_participatory_documents_annotations_on_zone_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.bigint "section_id"
+    t.index ["section_id"], name: "index_decidim_participatory_documents_annotations_on_section_id"
+    t.index ["uid"], name: "index_decidim_participatory_documents_annotations_on_uid"
   end
 
   create_table "decidim_participatory_documents_documents", force: :cascade do |t|
@@ -1049,16 +1050,17 @@ ActiveRecord::Schema.define(version: 2023_01_09_133540) do
     t.index ["decidim_user_group_id"], name: "participatory_documents_document_user_group"
   end
 
-  create_table "decidim_participatory_documents_zones", force: :cascade do |t|
+  create_table "decidim_participatory_documents_sections", force: :cascade do |t|
     t.bigint "document_id"
     t.jsonb "title"
     t.jsonb "description"
     t.string "state"
+    t.string "uid"
     t.datetime "published_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "uid"
     t.index ["document_id"], name: "document_zones"
+    t.index ["uid"], name: "index_decidim_participatory_documents_sections_on_uid"
   end
 
   create_table "decidim_participatory_process_groups", id: :serial, force: :cascade do |t|
@@ -1711,7 +1713,7 @@ ActiveRecord::Schema.define(version: 2023_01_09_133540) do
   add_foreign_key "decidim_editor_images", "decidim_users", column: "decidim_author_id"
   add_foreign_key "decidim_identities", "decidim_organizations"
   add_foreign_key "decidim_newsletters", "decidim_users", column: "author_id"
-  add_foreign_key "decidim_participatory_documents_annotations", "decidim_participatory_documents_zones", column: "zone_id"
+  add_foreign_key "decidim_participatory_documents_annotations", "decidim_participatory_documents_sections", column: "section_id"
   add_foreign_key "decidim_participatory_process_steps", "decidim_participatory_processes"
   add_foreign_key "decidim_participatory_processes", "decidim_organizations"
   add_foreign_key "decidim_participatory_processes", "decidim_scope_types"
