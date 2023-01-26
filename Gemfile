@@ -13,9 +13,9 @@ gem "decidim", DECIDIM_VERSION
 # gem "decidim-initiatives", DECIDIM_VERSION
 gem "decidim-templates", DECIDIM_VERSION
 
-gem "decidim-decidim_awesome", git: "https://github.com/openpoke/decidim-module-decidim_awesome", branch: "feat/etiquette-rules"
+gem "decidim-decidim_awesome", git: "https://github.com/openpoke/decidim-module-decidim_awesome", branch: "admin_accountability_view_and_controllers"
 gem 'decidim-reporting_proposals', git: "https://github.com/openpoke/decidim-module-reporting-proposals"
-gem 'decidim-participatory_documents', git: "https://github.com/openpoke/decidim-module-participatory-documents"
+gem 'decidim-participatory_documents', git: "https://github.com/openpoke/decidim-module-participatory-documents", branch: "feature/frontend"
 gem 'decidim-term_customizer', git: "https://github.com/openpoke/decidim-module-term_customizer"
 
 gem "bootsnap", "~> 1.7"

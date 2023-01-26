@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_01_13_142907) do
+ActiveRecord::Schema.define(version: 2023_01_26_125059) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "ltree"
@@ -1061,6 +1061,26 @@ ActiveRecord::Schema.define(version: 2023_01_13_142907) do
     t.datetime "updated_at", precision: 6, null: false
     t.index ["document_id"], name: "document_zones"
     t.index ["uid"], name: "index_decidim_participatory_documents_sections_on_uid"
+  end
+
+  create_table "decidim_participatory_documents_suggestions", force: :cascade do |t|
+    t.jsonb "body", null: false
+    t.string "suggestable_type", null: false
+    t.bigint "suggestable_id", null: false
+    t.string "decidim_author_type", null: false
+    t.bigint "decidim_author_id", null: false
+    t.bigint "decidim_user_group_id"
+    t.string "state", default: "not_answered"
+    t.datetime "answered_at"
+    t.boolean "answer_is_draft", default: false
+    t.jsonb "answer"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["answered_at"], name: "decidim_participatory_documents_suggestions_answered"
+    t.index ["decidim_author_type", "decidim_author_id"], name: "decidim_participatory_documents_suggestions_author"
+    t.index ["decidim_user_group_id"], name: "participatory_documents_suggestion_user_group"
+    t.index ["state"], name: "decidim_participatory_documents_suggestions_state"
+    t.index ["suggestable_type", "suggestable_id"], name: "decidim_participatory_documents_suggesstable"
   end
 
   create_table "decidim_participatory_process_groups", id: :serial, force: :cascade do |t|
