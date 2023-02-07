@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/openpoke/decidim
-  revision: 5fc7da9fcbb8a3c3c4aa89d7c5b8aeecee4bf497
+  revision: 9df2e443065f9e861abfb90d830c64452aaf6cae
   branch: 0.26-lucerne
   specs:
     decidim (0.26.4)
@@ -276,7 +276,7 @@ GEM
       public_suffix (>= 2.0.2, < 6.0)
     ast (2.4.2)
     aws-eventstream (1.2.0)
-    aws-partitions (1.705.0)
+    aws-partitions (1.706.0)
     aws-sdk-core (3.170.0)
       aws-eventstream (~> 1, >= 1.0.2)
       aws-partitions (~> 1, >= 1.651.0)
