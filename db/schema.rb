@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_01_26_125059) do
+ActiveRecord::Schema.define(version: 2023_02_14_142359) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "ltree"
@@ -1045,22 +1045,31 @@ ActiveRecord::Schema.define(version: 2023_01_26_125059) do
     t.bigint "decidim_user_group_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["decidim_author_type", "decidim_author_id"], name: "participatory_documents_document_author_id_and_type"
-    t.index ["decidim_component_id"], name: "participatory_documents_document_decidim_component"
-    t.index ["decidim_user_group_id"], name: "participatory_documents_document_user_group"
+    t.index ["decidim_author_type", "decidim_author_id"], name: "decidim_pd_document_author_id_and_type"
+    t.index ["decidim_component_id"], name: "decidim_pd_document_decidim_component"
+    t.index ["decidim_user_group_id"], name: "decidim_pd_document_user_group"
   end
 
   create_table "decidim_participatory_documents_sections", force: :cascade do |t|
     t.bigint "document_id"
     t.jsonb "title"
-    t.jsonb "description"
     t.string "state"
     t.string "uid"
-    t.datetime "published_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["document_id"], name: "document_zones"
     t.index ["uid"], name: "index_decidim_participatory_documents_sections_on_uid"
+  end
+
+  create_table "decidim_participatory_documents_suggestion_notes", force: :cascade do |t|
+    t.bigint "suggestion_id", null: false
+    t.bigint "decidim_author_id", null: false
+    t.jsonb "body", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["created_at"], name: "index_decidim_pd_suggestion_notes_on_created_at"
+    t.index ["decidim_author_id"], name: "decidim_pd_suggestion_note_author"
+    t.index ["suggestion_id"], name: "decidim_pd_suggestion_suggestion_note"
   end
 
   create_table "decidim_participatory_documents_suggestions", force: :cascade do |t|
@@ -1072,15 +1081,26 @@ ActiveRecord::Schema.define(version: 2023_01_26_125059) do
     t.bigint "decidim_user_group_id"
     t.string "state", default: "not_answered"
     t.datetime "answered_at"
-    t.boolean "answer_is_draft", default: false
+    t.boolean "answer_is_published", default: false
     t.jsonb "answer"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["answered_at"], name: "decidim_participatory_documents_suggestions_answered"
-    t.index ["decidim_author_type", "decidim_author_id"], name: "decidim_participatory_documents_suggestions_author"
-    t.index ["decidim_user_group_id"], name: "participatory_documents_suggestion_user_group"
-    t.index ["state"], name: "decidim_participatory_documents_suggestions_state"
-    t.index ["suggestable_type", "suggestable_id"], name: "decidim_participatory_documents_suggesstable"
+    t.integer "suggestion_notes_count", default: 0, null: false
+    t.index ["answered_at"], name: "decidim_pd_suggestions_answered"
+    t.index ["decidim_author_type", "decidim_author_id"], name: "decidim_pd_suggestions_author"
+    t.index ["decidim_user_group_id"], name: "decidim_pd_suggestion_user_group"
+    t.index ["state"], name: "decidim_pd_suggestions_state"
+    t.index ["suggestable_type", "suggestable_id"], name: "decidim_pd_suggesstable"
+  end
+
+  create_table "decidim_participatory_documents_valuation_assignments", force: :cascade do |t|
+    t.bigint "decidim_participatory_documents_suggestion_id", null: false
+    t.string "valuator_role_type", null: false
+    t.bigint "valuator_role_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["decidim_participatory_documents_suggestion_id"], name: "decidim_pd_valuation_assignment_suggestion"
+    t.index ["valuator_role_type", "valuator_role_id"], name: "decidim_pd_valuation_assignment_valuator_role"
   end
 
   create_table "decidim_participatory_process_groups", id: :serial, force: :cascade do |t|
