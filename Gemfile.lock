@@ -1,6 +1,15 @@
 GIT
+  remote: https://github.com/decidim-ice/decidim-module-decidim_awesome
+  revision: ae55db07507d223e4619c71dad58dfa1bb3e527d
+  specs:
+    decidim-decidim_awesome (0.9.1)
+      decidim-admin (>= 0.26.0, < 0.28)
+      decidim-core (>= 0.26.0, < 0.28)
+      sassc (~> 2.3)
+
+GIT
   remote: https://github.com/openpoke/decidim
-  revision: 9df2e443065f9e861abfb90d830c64452aaf6cae
+  revision: 29916d07e787700aad5911263ba54a57a2d439e7
   branch: 0.26-lucerne
   specs:
     decidim (0.26.4)
@@ -173,25 +182,15 @@ GIT
       decidim-core (= 0.26.4)
 
 GIT
-  remote: https://github.com/openpoke/decidim-module-decidim_awesome
-  revision: d92780ba845decb25d28e64a526fd72e78337685
-  branch: admin_accountability_view_and_controllers
-  specs:
-    decidim-decidim_awesome (0.9.0)
-      decidim-admin (>= 0.26.0, < 0.28)
-      decidim-core (>= 0.26.0, < 0.28)
-      sassc (~> 2.3)
-
-GIT
   remote: https://github.com/openpoke/decidim-module-participatory-documents
-  revision: 0d80e143747e2863cd177481b96fc48cbf8ea7c2
+  revision: 36fdcd27552b4806ea8ebb9e5d0945d6bce1c436
   specs:
     decidim-participatory_documents (0.1.0)
       decidim-core (>= 0.25.0, < 0.27)
 
 GIT
   remote: https://github.com/openpoke/decidim-module-reporting-proposals
-  revision: e5b8619ed7c485d2a07e1af92d862a4b41382728
+  revision: a9c1360aad386446b9df6e80264973ab9040b260
   specs:
     decidim-reporting_proposals (0.2.0)
       decidim-admin (>= 0.25.0, < 0.27)
@@ -275,7 +274,7 @@ GEM
       public_suffix (>= 2.0.2, < 6.0)
     ast (2.4.2)
     aws-eventstream (1.2.0)
-    aws-partitions (1.711.0)
+    aws-partitions (1.714.0)
     aws-sdk-core (3.170.0)
       aws-eventstream (~> 1, >= 1.0.2)
       aws-partitions (~> 1, >= 1.651.0)
@@ -387,14 +386,14 @@ GEM
       rainbow (>= 2.1.0)
     descendants_tracker (0.0.4)
       thread_safe (~> 0.3, >= 0.3.1)
-    devise (4.8.1)
+    devise (4.9.0)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
       railties (>= 4.1.0)
       responders
       warden (~> 1.2.3)
-    devise-i18n (1.10.2)
-      devise (>= 4.8.0)
+    devise-i18n (1.11.0)
+      devise (>= 4.9.0)
     devise_invitable (2.0.7)
       actionmailer (>= 5.0)
       devise (>= 4.6)
@@ -535,7 +534,7 @@ GEM
     method_source (1.0.0)
     mime-types (3.4.1)
       mime-types-data (~> 3.2015)
-    mime-types-data (3.2022.0105)
+    mime-types-data (3.2023.0218.1)
     mini_magick (4.12.0)
     mini_mime (1.1.2)
     minitest (5.17.0)
@@ -792,8 +791,8 @@ GEM
       unicode-display_width (>= 1.1.1, < 3)
     thor (1.2.1)
     thread_safe (0.3.6)
-    tilt (2.0.11)
-    timeout (0.3.1)
+    tilt (2.1.0)
+    timeout (0.3.2)
     tomlrb (2.0.3)
     tzinfo (1.2.11)
       thread_safe (~> 0.1)
