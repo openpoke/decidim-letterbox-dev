@@ -182,8 +182,17 @@ GIT
       decidim-core (= 0.26.4)
 
 GIT
+  remote: https://github.com/openpoke/decidim-module-newsletter_agenda.git
+  revision: 5c2497ea55f9d2375963f82daa42eaad6da0bfdb
+  specs:
+    decidim-newsletter_agenda (1.0.0)
+      date_range_formatter
+      decidim-admin (>= 0.26.0, < 0.27)
+      decidim-core (>= 0.26.0, < 0.27)
+
+GIT
   remote: https://github.com/openpoke/decidim-module-participatory-documents
-  revision: 20f0b1db61921f50133aff30749150f221c9f903
+  revision: 81c4467d860512c79ffeec13b3b04ac2b68077cd
   branch: styling
   specs:
     decidim-participatory_documents (0.1.0)
@@ -275,13 +284,13 @@ GEM
       public_suffix (>= 2.0.2, < 6.0)
     ast (2.4.2)
     aws-eventstream (1.2.0)
-    aws-partitions (1.717.0)
+    aws-partitions (1.722.0)
     aws-sdk-core (3.170.0)
       aws-eventstream (~> 1, >= 1.0.2)
       aws-partitions (~> 1, >= 1.651.0)
       aws-sigv4 (~> 1.5)
       jmespath (~> 1, >= 1.6.1)
-    aws-sdk-kms (1.62.0)
+    aws-sdk-kms (1.63.0)
       aws-sdk-core (~> 3, >= 3.165.0)
       aws-sigv4 (~> 1.1)
     aws-sdk-s3 (1.119.1)
@@ -347,7 +356,7 @@ GEM
       actionpack (>= 5.0)
       cells (>= 4.1.6, < 5.0.0)
     charlock_holmes (0.7.7)
-    chef-utils (18.1.0)
+    chef-utils (18.1.29)
       concurrent-ruby
     childprocess (3.0.0)
     coercible (1.0.0)
@@ -367,6 +376,8 @@ GEM
     css_parser (1.14.0)
       addressable
     date (3.3.3)
+    date_range_formatter (0.1.2)
+      activesupport (>= 3.2.0)
     date_validator (0.9.0)
       activemodel
       activesupport
@@ -538,13 +549,13 @@ GEM
     mime-types-data (3.2023.0218.1)
     mini_magick (4.12.0)
     mini_mime (1.1.2)
-    minitest (5.17.0)
+    minitest (5.18.0)
     mixlib-cli (2.1.8)
     mixlib-config (3.0.27)
       tomlrb
     mixlib-shellout (3.2.7)
       chef-utils
-    msgpack (1.6.0)
+    msgpack (1.6.1)
     multi_xml (0.6.0)
     mustache (1.1.1)
     net-imap (0.3.4)
@@ -602,7 +613,7 @@ GEM
       activerecord (>= 5.2)
       request_store (~> 1.1)
     parallel (1.22.1)
-    parser (3.2.1.0)
+    parser (3.2.1.1)
       ast (~> 2.4.1)
     pg (1.1.4)
     pg_search (2.3.6)
@@ -622,7 +633,7 @@ GEM
       nio4r (~> 2.0)
     raabro (1.4.0)
     racc (1.6.2)
-    rack (2.2.6.2)
+    rack (2.2.6.3)
     rack-attack (6.6.1)
       rack (>= 1.0, < 3)
     rack-cors (1.1.1)
@@ -738,7 +749,7 @@ GEM
       rubocop (>= 0.90.0, < 2.0)
     rubocop-rspec (1.43.2)
       rubocop (~> 0.87)
-    ruby-progressbar (1.11.0)
+    ruby-progressbar (1.13.0)
     ruby-vips (2.1.4)
       ffi (~> 1.12)
     ruby2_keywords (0.0.5)
@@ -856,6 +867,7 @@ DEPENDENCIES
   decidim-decidim_awesome!
   decidim-dev!
   decidim-microsoft
+  decidim-newsletter_agenda!
   decidim-participatory_documents!
   decidim-reporting_proposals!
   decidim-templates!
