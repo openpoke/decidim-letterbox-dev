@@ -60,6 +60,7 @@ RUN sed -ie '/^Rails\.application\.configure/a config.deface.enabled = false' co
 RUN RAILS_ENV=production \
     SECRET_KEY_BASE=dummy \
     RAILS_MASTER_KEY=dummy \
+    DB_ADAPTER=nulldb \
     bundle exec rails assets:precompile
 
 RUN sed -ie '/^config\.deface\.enabled = false/d' config/environments/production.rb 2>/dev/null || true
