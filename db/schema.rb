@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_02_14_142359) do
+ActiveRecord::Schema.define(version: 2023_03_20_213153) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "ltree"
@@ -1025,20 +1025,19 @@ ActiveRecord::Schema.define(version: 2023_02_14_142359) do
   end
 
   create_table "decidim_participatory_documents_annotations", force: :cascade do |t|
-    t.bigint "document_id"
-    t.string "uid"
+    t.bigint "section_id", null: false
     t.jsonb "rect", default: {}
     t.integer "page_number", default: 1
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.bigint "section_id"
-    t.index ["section_id"], name: "index_decidim_participatory_documents_annotations_on_section_id"
-    t.index ["uid"], name: "index_decidim_participatory_documents_annotations_on_uid"
+    t.index ["section_id"], name: "decidim_pd_annotation_section"
   end
 
   create_table "decidim_participatory_documents_documents", force: :cascade do |t|
     t.jsonb "title"
     t.jsonb "description"
+    t.string "box_color"
+    t.integer "box_opacity"
     t.bigint "decidim_component_id", null: false
     t.string "decidim_author_type", null: false
     t.bigint "decidim_author_id", null: false
@@ -1051,14 +1050,12 @@ ActiveRecord::Schema.define(version: 2023_02_14_142359) do
   end
 
   create_table "decidim_participatory_documents_sections", force: :cascade do |t|
-    t.bigint "document_id"
+    t.bigint "document_id", null: false
     t.jsonb "title"
     t.string "state"
-    t.string "uid"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["document_id"], name: "document_zones"
-    t.index ["uid"], name: "index_decidim_participatory_documents_sections_on_uid"
+    t.index ["document_id"], name: "decidim_pd_section_document"
   end
 
   create_table "decidim_participatory_documents_suggestion_notes", force: :cascade do |t|
@@ -1069,7 +1066,7 @@ ActiveRecord::Schema.define(version: 2023_02_14_142359) do
     t.datetime "updated_at", precision: 6, null: false
     t.index ["created_at"], name: "index_decidim_pd_suggestion_notes_on_created_at"
     t.index ["decidim_author_id"], name: "decidim_pd_suggestion_note_author"
-    t.index ["suggestion_id"], name: "decidim_pd_suggestion_suggestion_note"
+    t.index ["suggestion_id"], name: "decidim_pd_suggestion_note_suggestion"
   end
 
   create_table "decidim_participatory_documents_suggestions", force: :cascade do |t|
@@ -1086,11 +1083,11 @@ ActiveRecord::Schema.define(version: 2023_02_14_142359) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "suggestion_notes_count", default: 0, null: false
-    t.index ["answered_at"], name: "decidim_pd_suggestions_answered"
-    t.index ["decidim_author_type", "decidim_author_id"], name: "decidim_pd_suggestions_author"
+    t.index ["answered_at"], name: "decidim_pd_suggestion_answered"
+    t.index ["decidim_author_type", "decidim_author_id"], name: "decidim_pd_suggestion_author"
     t.index ["decidim_user_group_id"], name: "decidim_pd_suggestion_user_group"
-    t.index ["state"], name: "decidim_pd_suggestions_state"
-    t.index ["suggestable_type", "suggestable_id"], name: "decidim_pd_suggesstable"
+    t.index ["state"], name: "decidim_pd_suggestion_state"
+    t.index ["suggestable_type", "suggestable_id"], name: "decidim_pd_seggestions_suggestable"
   end
 
   create_table "decidim_participatory_documents_valuation_assignments", force: :cascade do |t|
@@ -1753,7 +1750,6 @@ ActiveRecord::Schema.define(version: 2023_02_14_142359) do
   add_foreign_key "decidim_editor_images", "decidim_users", column: "decidim_author_id"
   add_foreign_key "decidim_identities", "decidim_organizations"
   add_foreign_key "decidim_newsletters", "decidim_users", column: "author_id"
-  add_foreign_key "decidim_participatory_documents_annotations", "decidim_participatory_documents_sections", column: "section_id"
   add_foreign_key "decidim_participatory_process_steps", "decidim_participatory_processes"
   add_foreign_key "decidim_participatory_processes", "decidim_organizations"
   add_foreign_key "decidim_participatory_processes", "decidim_scope_types"
