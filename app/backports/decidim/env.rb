@@ -23,7 +23,7 @@ module Decidim
     end
 
     def present?
-      present?
+      !blank? # rubocop:disable Rails/Present
     end
 
     def to_boolean_string
