@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 # This migration comes from decidim_budgets (originally 20200714103519)
 
 class MoveBudgetsToOwnModel < ActiveRecord::Migration[5.2]
@@ -48,12 +49,12 @@ class MoveBudgetsToOwnModel < ActiveRecord::Migration[5.2]
 
   # up methods
   def budget_components
-    @budget_components ||= Component.where(manifest_name: "budgets")
+    @budget_components ||= Component.where(manifest_name: 'budgets')
   end
 
   def create_budget_resource_from(component)
-    component_total_budget = if component["settings"].dig("global", "total_budget")
-                               component["settings"]["global"]["total_budget"]
+    component_total_budget = if component['settings'].dig('global', 'total_budget')
+                               component['settings']['global']['total_budget']
                              else
                                100_000_000
                              end
@@ -66,26 +67,22 @@ class MoveBudgetsToOwnModel < ActiveRecord::Migration[5.2]
   end
 
   def add_budget_references_to_projects(resource)
-    # rubocop:disable Rails/SkipsModelValidations
     Project.where(decidim_component_id: resource.decidim_component_id)
            .update_all(decidim_budgets_budget_id: resource.id)
-    # rubocop:enable Rails/SkipsModelValidations
   end
 
   def add_budget_reference_to_orders(resource)
-    # rubocop:disable Rails/SkipsModelValidations
     Order.where(decidim_component_id: resource.decidim_component_id)
          .update_all(decidim_budgets_budget_id: resource.id)
-    # rubocop:enable Rails/SkipsModelValidations
   end
 
   # down methods
 
   def revert_budget_to_component(resource)
-    component = Component.find_by(id: resource.decidim_component_id, manifest_name: "budgets")
-    component_settings = if resource.total_budget && component["settings"].try(:key?, "global")
-                           component["settings"]["global"].merge!(total_budget: resource.total_budget)
-                           component["settings"]
+    component = Component.find_by(id: resource.decidim_component_id, manifest_name: 'budgets')
+    component_settings = if resource.total_budget && component['settings'].try(:key?, 'global')
+                           component['settings']['global'].merge!(total_budget: resource.total_budget)
+                           component['settings']
                          end
 
     component.update!(
@@ -95,16 +92,12 @@ class MoveBudgetsToOwnModel < ActiveRecord::Migration[5.2]
   end
 
   def add_component_reference_to_orders(resource)
-    # rubocop:disable Rails/SkipsModelValidations
     Order.where(decidim_budgets_budget_id: resource.id)
          .update_all(decidim_component_id: resource.decidim_component_id)
-    # rubocop:enable Rails/SkipsModelValidations
   end
 
   def add_component_reference_to_projects(resource)
-    # rubocop:disable Rails/SkipsModelValidations
     Project.where(decidim_budgets_budget_id: resource.id)
            .update_all(decidim_component_id: resource.decidim_component_id)
-    # rubocop:enable Rails/SkipsModelValidations
   end
 end

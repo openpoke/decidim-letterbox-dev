@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 # This migration comes from decidim (originally 20170116110851)
 
 class CreateIdentities < ActiveRecord::Migration[5.0]
@@ -9,6 +10,6 @@ class CreateIdentities < ActiveRecord::Migration[5.0]
       t.references :decidim_user, null: false, index: true
     end
 
-    add_index :decidim_identities, [:provider, :uid], unique: true
+    add_index :decidim_identities, %i[provider uid], unique: true
   end
 end

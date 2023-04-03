@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 # This migration comes from decidim_proposals (originally 20200120215928)
 
 # This migration must be executed after CreateDecidimEndorsements migration in decidim-core.
@@ -14,10 +15,10 @@ class MoveProposalEndorsementsToCoreEndorsements < ActiveRecord::Migration[5.2]
   # Move ProposalEndorsements to Endorsements
   def up
     non_duplicated_group_endorsements = ProposalEndorsement.select(
-      "MIN(id) as id, decidim_user_group_id"
+      'MIN(id) as id, decidim_user_group_id'
     ).group(:decidim_user_group_id).where.not(decidim_user_group_id: nil).map(&:id)
 
-    ProposalEndorsement.where("id IN (?) OR decidim_user_group_id IS NULL", non_duplicated_group_endorsements).find_each do |prop_endorsement|
+    ProposalEndorsement.where('id IN (?) OR decidim_user_group_id IS NULL', non_duplicated_group_endorsements).find_each do |prop_endorsement|
       Endorsement.create!(
         resource_type: Decidim::Proposals::Proposal.name,
         resource_id: prop_endorsement.decidim_proposal_id,
@@ -34,12 +35,12 @@ class MoveProposalEndorsementsToCoreEndorsements < ActiveRecord::Migration[5.2]
 
   def down
     non_duplicated_group_endorsements = Endorsement.select(
-      "MIN(id) as id, decidim_user_group_id"
+      'MIN(id) as id, decidim_user_group_id'
     ).group(:decidim_user_group_id).where.not(decidim_user_group_id: nil).map(&:id)
 
     Endorsement
-      .where(resource_type: "Decidim::Proposals::Proposal")
-      .where("id IN (?) OR decidim_user_group_id IS NULL", non_duplicated_group_endorsements).find_each do |endorsement|
+      .where(resource_type: 'Decidim::Proposals::Proposal')
+      .where('id IN (?) OR decidim_user_group_id IS NULL', non_duplicated_group_endorsements).find_each do |endorsement|
       ProposalEndorsement.find_or_create_by!(
         decidim_proposal_id: endorsement.resource_id,
         decidim_author_type: endorsement.decidim_author_type,

@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 # This migration comes from decidim_templates (originally 20221006184905)
 
 class MigrateTemplateable < ActiveRecord::Migration[6.0]

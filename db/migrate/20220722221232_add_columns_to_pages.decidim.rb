@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 # This migration comes from decidim (originally 20181022090732)
 
 class AddColumnsToPages < ActiveRecord::Migration[5.2]
@@ -6,7 +7,6 @@ class AddColumnsToPages < ActiveRecord::Migration[5.2]
     self.table_name = :decidim_static_pages
   end
 
-  # rubocop:disable Rails/SkipsModelValidations
   def change
     change_table :decidim_static_pages do |t|
       t.column :weight, :integer, default: nil, null: true
@@ -14,8 +14,7 @@ class AddColumnsToPages < ActiveRecord::Migration[5.2]
     end
 
     Decidim::StaticPage.where(
-      slug: ["faq", "terms-and-conditions", "accessibility"]
+      slug: %w[faq terms-and-conditions accessibility]
     ).update_all(show_in_footer: true)
-    # rubocop:enable Rails/SkipsModelValidations
   end
 end

@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 # This migration comes from decidim_assemblies (originally 20170727190859)
 
 class AddAssemblies < ActiveRecord::Migration[5.0]
@@ -9,7 +10,7 @@ class AddAssemblies < ActiveRecord::Migration[5.0]
 
       t.integer :decidim_organization_id,
                 foreign_key: true,
-                index: { name: "index_decidim_assemblies_on_decidim_organization_id" }
+                index: { name: 'index_decidim_assemblies_on_decidim_organization_id' }
 
       t.datetime :created_at, null: false
       t.datetime :updated_at, null: false
@@ -30,8 +31,8 @@ class AddAssemblies < ActiveRecord::Migration[5.0]
       t.boolean :show_statistics, default: false
       t.integer :decidim_scope_id
 
-      t.index [:decidim_organization_id, :slug],
-              name: "index_unique_assembly_slug_and_organization",
+      t.index %i[decidim_organization_id slug],
+              name: 'index_unique_assembly_slug_and_organization',
               unique: true
     end
   end

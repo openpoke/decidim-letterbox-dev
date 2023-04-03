@@ -1,15 +1,16 @@
 # frozen_string_literal: true
+
 # This migration comes from decidim_meetings (originally 20210506180226)
 
 class MergeMeetingsMinutesIntoMeetingsTable < ActiveRecord::Migration[6.0]
   class Minutes < ApplicationRecord
-    self.table_name = "decidim_meetings_minutes"
+    self.table_name = 'decidim_meetings_minutes'
 
-    belongs_to :meeting, foreign_key: "decidim_meeting_id", class_name: "Meeting"
+    belongs_to :meeting, foreign_key: 'decidim_meeting_id', class_name: 'Meeting'
   end
 
   class Meeting < ApplicationRecord
-    self.table_name = "decidim_meetings_meetings"
+    self.table_name = 'decidim_meetings_meetings'
   end
 
   def up

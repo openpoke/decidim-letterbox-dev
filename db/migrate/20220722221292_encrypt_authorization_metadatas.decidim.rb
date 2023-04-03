@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 # This migration comes from decidim (originally 20201127114444)
 
 class EncryptAuthorizationMetadatas < ActiveRecord::Migration[5.2]
@@ -15,12 +16,10 @@ class EncryptAuthorizationMetadatas < ActiveRecord::Migration[5.2]
 
   def down
     Decidim::Authorization.all.each do |auth|
-      # rubocop:disable Rails/SkipsModelValidations
       auth.update_columns(
         metadata: decrypt_hash(auth.metadata),
         verification_metadata: decrypt_hash(auth.verification_metadata)
       )
-      # rubocop:enable Rails/SkipsModelValidations
     end
   end
 

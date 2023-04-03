@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 # This migration comes from decidim (originally 20161018091013)
 
 class CreateDecidimAuthorizations < ActiveRecord::Migration[5.0]
@@ -11,6 +12,6 @@ class CreateDecidimAuthorizations < ActiveRecord::Migration[5.0]
       t.timestamps
     end
 
-    add_index :decidim_authorizations, [:decidim_user_id, :name], unique: true
+    add_index :decidim_authorizations, %i[decidim_user_id name], unique: true
   end
 end

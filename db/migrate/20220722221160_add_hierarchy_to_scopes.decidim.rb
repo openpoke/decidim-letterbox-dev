@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 # This migration comes from decidim (originally 20170605162500)
 
 class AddHierarchyToScopes < ActiveRecord::Migration[5.0]
@@ -29,29 +30,29 @@ class AddHierarchyToScopes < ActiveRecord::Migration[5.0]
       t.references :parent, foreign_key: { to_table: :decidim_scopes }
       t.string :code
       t.integer :part_of, array: true, default: [], null: false
-      t.index :part_of, using: "gin"
+      t.index :part_of, using: 'gin'
     end
 
     current_data.each do |s|
-      locales = Organization.find(s["decidim_organization_id"]).available_locales
-      name = s["name"].gsub(/'/, "''")
+      locales = Organization.find(s['decidim_organization_id']).available_locales
+      name = s['name'].gsub(/'/, "''")
       execute("
         UPDATE decidim_scopes
         SET name = '#{locales.index_with { name }.to_json}',
-            code = #{quote(s["id"])}
-        WHERE id = #{s["id"]}
+            code = #{quote(s['id'])}
+        WHERE id = #{s['id']}
       ")
     end
 
     change_column_null :decidim_scopes, :name, false
     change_column_null :decidim_scopes, :code, false
-    add_index :decidim_scopes, [:decidim_organization_id, :code], unique: true
+    add_index :decidim_scopes, %i[decidim_organization_id code], unique: true
   end
 
   def self.down
     # schema migration
     change_table :decidim_scopes do |t|
-      t.remove_index [:decidim_organization_id, :code]
+      t.remove_index %i[decidim_organization_id code]
       t.change :name, :string, null: false, index: :uniqueness
       t.remove :scope_type_id, :parent_id, :code, :part_of
     end
@@ -60,11 +61,11 @@ class AddHierarchyToScopes < ActiveRecord::Migration[5.0]
 
     # post migration data fixes
     Scope.select(:id, :name).as_json.each do |s|
-      name = quote(JSON.parse(s["name"]).values.first)
+      name = quote(JSON.parse(s['name']).values.first)
       execute("
         UPDATE decidim_scopes
         SET name = #{name}
-        WHERE id = #{s["id"]}
+        WHERE id = #{s['id']}
       ")
     end
   end

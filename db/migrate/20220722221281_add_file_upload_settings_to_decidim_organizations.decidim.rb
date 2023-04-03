@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 # This migration comes from decidim (originally 20200730142511)
 
 class AddFileUploadSettingsToDecidimOrganizations < ActiveRecord::Migration[5.2]
@@ -17,9 +18,9 @@ class AddFileUploadSettingsToDecidimOrganizations < ActiveRecord::Migration[5.2]
           Decidim::Organization.all.each do |organization|
             organization.update(
               file_upload_settings: default_settings.merge(
-                "maximum_file_size" => {
-                  "default" => attachment_size / 1.megabyte,
-                  "avatar" => avatar_size / 1.megabyte
+                'maximum_file_size' => {
+                  'default' => attachment_size / 1.megabyte,
+                  'avatar' => avatar_size / 1.megabyte
                 }
               )
             )

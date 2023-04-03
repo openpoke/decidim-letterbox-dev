@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 # This migration comes from decidim_assemblies (originally 20200108113855)
 
 class CreateDecidimAssemblyTypes < ActiveRecord::Migration[5.2]
@@ -9,7 +10,7 @@ class CreateDecidimAssemblyTypes < ActiveRecord::Migration[5.2]
       t.integer :decidim_organization_id,
                 foreign_key: true,
                 index: {
-                  name: "index_decidim_assemblies_types_on_decidim_organization_id"
+                  name: 'index_decidim_assemblies_types_on_decidim_organization_id'
                 }
 
       t.timestamps

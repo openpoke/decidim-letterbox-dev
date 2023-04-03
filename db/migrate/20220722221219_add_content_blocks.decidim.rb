@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 # This migration comes from decidim (originally 20180724103814)
 
 class AddContentBlocks < ActiveRecord::Migration[5.2]
@@ -15,9 +16,9 @@ class AddContentBlocks < ActiveRecord::Migration[5.2]
 
     add_index(
       :decidim_content_blocks,
-      [:decidim_organization_id, :scope, :manifest_name],
+      %i[decidim_organization_id scope manifest_name],
       unique: true,
-      name: "idx_dcdm_content_blocks_uniq_org_id_scope_manifest_name"
+      name: 'idx_dcdm_content_blocks_uniq_org_id_scope_manifest_name'
     )
   end
 end
