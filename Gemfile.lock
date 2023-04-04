@@ -199,7 +199,7 @@ GIT
 
 GIT
   remote: https://github.com/openpoke/decidim-module-reporting-proposals
-  revision: 7a982fb7c0bb1544472d38113d22846765d3746c
+  revision: 98e046c8143c19fefd27be9add8bc7343005b01e
   specs:
     decidim-reporting_proposals (0.3.0)
       decidim-admin (>= 0.25.0, < 0.27)
@@ -283,7 +283,7 @@ GEM
       public_suffix (>= 2.0.2, < 6.0)
     ast (2.4.2)
     aws-eventstream (1.2.0)
-    aws-partitions (1.739.0)
+    aws-partitions (1.740.0)
     aws-sdk-core (3.171.0)
       aws-eventstream (~> 1, >= 1.0.2)
       aws-partitions (~> 1, >= 1.651.0)
