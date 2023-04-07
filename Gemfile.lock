@@ -8,9 +8,9 @@ GIT
       sassc (~> 2.3)
 
 GIT
-  remote: https://github.com/openpoke/decidim
-  revision: aa76341499e5d2e47ea850c02d2ba2da2818a47e
-  branch: 0.26-lucerne
+  remote: https://github.com/decidim/decidim
+  revision: 02cef9f89b5045dcb89779451e6698e0b814ae02
+  branch: release/0.26-stable
   specs:
     decidim (0.26.5)
       decidim-accountability (= 0.26.5)
@@ -199,13 +199,14 @@ GIT
 
 GIT
   remote: https://github.com/openpoke/decidim-module-reporting-proposals
-  revision: 98e046c8143c19fefd27be9add8bc7343005b01e
+  revision: 3a590fe32bbbc6e45adac171696c27cca7ae1a27
   specs:
-    decidim-reporting_proposals (0.3.0)
+    decidim-reporting_proposals (0.4.0)
       decidim-admin (>= 0.25.0, < 0.27)
       decidim-core (>= 0.25.0, < 0.27)
       decidim-participatory_processes (>= 0.25.0, < 0.27)
       decidim-proposals (>= 0.25.0, < 0.27)
+      decidim-templates (>= 0.25.0, < 0.27)
       deface (>= 1.9)
 
 GIT
@@ -279,11 +280,11 @@ GEM
       zeitwerk (~> 2.2, >= 2.2.2)
     acts_as_list (0.9.19)
       activerecord (>= 3.0)
-    addressable (2.8.2)
+    addressable (2.8.3)
       public_suffix (>= 2.0.2, < 6.0)
     ast (2.4.2)
     aws-eventstream (1.2.0)
-    aws-partitions (1.740.0)
+    aws-partitions (1.743.0)
     aws-sdk-core (3.171.0)
       aws-eventstream (~> 1, >= 1.0.2)
       aws-partitions (~> 1, >= 1.651.0)
@@ -292,7 +293,7 @@ GEM
     aws-sdk-kms (1.63.0)
       aws-sdk-core (~> 3, >= 3.165.0)
       aws-sigv4 (~> 1.1)
-    aws-sdk-s3 (1.120.0)
+    aws-sdk-s3 (1.120.1)
       aws-sdk-core (~> 3, >= 3.165.0)
       aws-sdk-kms (~> 1)
       aws-sigv4 (~> 1.4)
@@ -355,7 +356,7 @@ GEM
       actionpack (>= 5.0)
       cells (>= 4.1.6, < 5.0.0)
     charlock_holmes (0.7.7)
-    chef-utils (18.2.5)
+    chef-utils (18.2.7)
       concurrent-ruby
     childprocess (3.0.0)
     coercible (1.0.0)
