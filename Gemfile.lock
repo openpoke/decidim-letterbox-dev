@@ -9,7 +9,7 @@ GIT
 
 GIT
   remote: https://github.com/decidim/decidim
-  revision: 02cef9f89b5045dcb89779451e6698e0b814ae02
+  revision: e6d529c1eb597f1e4288ea332b0552d1a9c04472
   branch: release/0.26-stable
   specs:
     decidim (0.26.5)
@@ -199,7 +199,7 @@ GIT
 
 GIT
   remote: https://github.com/openpoke/decidim-module-reporting-proposals
-  revision: 3a590fe32bbbc6e45adac171696c27cca7ae1a27
+  revision: df9584c7f36dd6ce5ef59bfb7174a432eec5c250
   specs:
     decidim-reporting_proposals (0.4.0)
       decidim-admin (>= 0.25.0, < 0.27)
@@ -280,11 +280,11 @@ GEM
       zeitwerk (~> 2.2, >= 2.2.2)
     acts_as_list (0.9.19)
       activerecord (>= 3.0)
-    addressable (2.8.3)
+    addressable (2.8.4)
       public_suffix (>= 2.0.2, < 6.0)
     ast (2.4.2)
     aws-eventstream (1.2.0)
-    aws-partitions (1.743.0)
+    aws-partitions (1.744.0)
     aws-sdk-core (3.171.0)
       aws-eventstream (~> 1, >= 1.0.2)
       aws-partitions (~> 1, >= 1.651.0)
