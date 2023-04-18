@@ -1,4 +1,4 @@
-:concurrency: <%= ENV.fetch("SIDEKIQ_CONCURRENCY", 5) %>
+:concurrency: <%= ENV.fetch("SIDEKIQ_CONCURRENCY", "5").to_i %>
 :queues:
   - [mailers, 4]
   - [vote_reminder, 2]
@@ -13,3 +13,4 @@
   - [block_user, 2]
   - [metrics, 1]
   - [exports, 1]
+  - [close_meeting_reminder, 1]
