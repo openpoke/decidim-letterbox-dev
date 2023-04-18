@@ -3,7 +3,7 @@ services:
   app:
     build: .
     volumes:
-      - ./init.sh:/app/init.sh
+      - ./entrypoint.sh:/app/entrypoint.sh
       - ./db/seeds.rb:/app/db/seeds.rb
       - ./tmp/pids:/app/tmp/pids
     #   - .:/app
@@ -20,11 +20,10 @@ services:
     depends_on:
       - db
       - redis
-    command: /app/init.sh
   sidekiq:
     build: .
     volumes:
-      - ./init.sh:/app/init.sh
+      - ./entrypoint.sh:/app/entrypoint.sh
     #   - .:/app
     #   - bundle:/usr/local/bundle
     #   - node_modules:/app/node_modules
@@ -34,10 +33,9 @@ services:
       - DECIDIM_FORCE_SSL=false
       - QUEUE_ADAPTER=sidekiq
       - REDIS_URL=redis://redis:6379/1
-      - SIDEKIQ_WORKER=true
+      - RUN_SIDEKIQ=true
     depends_on:
       - redis
-    command: /app/init.sh
   db:
     image: postgres:13
     ports:

@@ -284,7 +284,7 @@ GEM
       public_suffix (>= 2.0.2, < 6.0)
     ast (2.4.2)
     aws-eventstream (1.2.0)
-    aws-partitions (1.744.0)
+    aws-partitions (1.749.0)
     aws-sdk-core (3.171.0)
       aws-eventstream (~> 1, >= 1.0.2)
       aws-partitions (~> 1, >= 1.651.0)
@@ -299,7 +299,7 @@ GEM
       aws-sigv4 (~> 1.4)
     aws-sigv4 (1.5.2)
       aws-eventstream (~> 1, >= 1.0.2)
-    axe-core-api (4.6.0)
+    axe-core-api (4.6.1)
       dumb_delegator
       virtus
     axe-core-rspec (4.1.0)
@@ -411,8 +411,8 @@ GEM
       devise (>= 4.6)
     diff-lcs (1.5.0)
     diffy (3.4.2)
-    doc2text (0.4.5)
-      nokogiri (>= 1.13.2, < 1.14.0)
+    doc2text (0.4.6)
+      nokogiri (>= 1.13.2, < 1.15.0)
       rubyzip (~> 2.3.0)
     docile (1.4.0)
     doorkeeper (5.6.6)
@@ -568,7 +568,7 @@ GEM
     net-smtp (0.3.3)
       net-protocol
     nio4r (2.5.9)
-    nokogiri (1.13.10-x86_64-linux)
+    nokogiri (1.14.3-x86_64-linux)
       racc (~> 1.4)
     oauth (1.1.0)
       oauth-tty (~> 1.0, >= 1.0.1)
@@ -638,7 +638,7 @@ GEM
       rack (>= 1.0, < 3)
     rack-cors (1.1.1)
       rack (>= 2.0.0)
-    rack-protection (3.0.5)
+    rack-protection (3.0.6)
       rack
     rack-proxy (0.7.6)
       rack
@@ -694,7 +694,7 @@ GEM
       wisper (>= 1.6.1)
     redcarpet (3.6.0)
     redis (4.8.1)
-    regexp_parser (2.7.0)
+    regexp_parser (2.8.0)
     request_store (1.5.1)
       rack (>= 1.4)
     responders (3.1.0)
