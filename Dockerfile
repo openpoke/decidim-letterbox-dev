@@ -110,6 +110,8 @@ COPY ./entrypoint.sh /app/entrypoint.sh
 COPY ./supervisord.conf /etc/supervisord.conf 
 COPY --from=builder --chown=app:app /usr/local/bundle/ /usr/local/bundle/
 COPY --from=builder --chown=app:app /app /app
+# add custom pdfjs from public folder
+COPY ./public/pdfjs /app/public/pdfjs
 
 USER app
 HEALTHCHECK --interval=1m --timeout=5s --start-period=30s \
