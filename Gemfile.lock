@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/decidim-ice/decidim-module-decidim_awesome
-  revision: a5fb3423cb09379e2cbf40e001e44325834b31c2
+  revision: 016ab767f6b60eef1632c1a9839e2b1e25924115
   specs:
     decidim-decidim_awesome (0.9.1)
       decidim-admin (>= 0.26.0, < 0.28)
@@ -9,7 +9,7 @@ GIT
 
 GIT
   remote: https://github.com/decidim/decidim
-  revision: e6d529c1eb597f1e4288ea332b0552d1a9c04472
+  revision: 6d71e1ff852dfc1edb97943753e36c44b11ebc17
   branch: release/0.26-stable
   specs:
     decidim (0.26.5)
@@ -183,7 +183,7 @@ GIT
 
 GIT
   remote: https://github.com/openpoke/decidim-module-newsletter_agenda.git
-  revision: d086d0613de72a15714190aae09ec5370981694a
+  revision: 64036ee0418645b55a030103b63fc05151b27d06
   specs:
     decidim-newsletter_agenda (1.0.0)
       date_range_formatter
@@ -199,9 +199,9 @@ GIT
 
 GIT
   remote: https://github.com/openpoke/decidim-module-reporting-proposals
-  revision: ce06d882bdcbf0db26336268afbede643a22fadd
+  revision: d8b65db1d85403a999868267bc1d98b6087c11df
   specs:
-    decidim-reporting_proposals (0.4.0)
+    decidim-reporting_proposals (0.4.1)
       decidim-admin (>= 0.25.0, < 0.27)
       decidim-core (>= 0.25.0, < 0.27)
       decidim-participatory_processes (>= 0.25.0, < 0.27)
@@ -284,22 +284,22 @@ GEM
       public_suffix (>= 2.0.2, < 6.0)
     ast (2.4.2)
     aws-eventstream (1.2.0)
-    aws-partitions (1.749.0)
-    aws-sdk-core (3.171.0)
+    aws-partitions (1.762.0)
+    aws-sdk-core (3.172.0)
       aws-eventstream (~> 1, >= 1.0.2)
       aws-partitions (~> 1, >= 1.651.0)
       aws-sigv4 (~> 1.5)
       jmespath (~> 1, >= 1.6.1)
-    aws-sdk-kms (1.63.0)
+    aws-sdk-kms (1.64.0)
       aws-sdk-core (~> 3, >= 3.165.0)
       aws-sigv4 (~> 1.1)
-    aws-sdk-s3 (1.120.1)
+    aws-sdk-s3 (1.122.0)
       aws-sdk-core (~> 3, >= 3.165.0)
       aws-sdk-kms (~> 1)
       aws-sigv4 (~> 1.4)
     aws-sigv4 (1.5.2)
       aws-eventstream (~> 1, >= 1.0.2)
-    axe-core-api (4.6.1)
+    axe-core-api (4.7.0)
       dumb_delegator
       virtus
     axe-core-rspec (4.1.0)
@@ -406,7 +406,7 @@ GEM
       warden (~> 1.2.3)
     devise-i18n (1.11.0)
       devise (>= 4.9.0)
-    devise_invitable (2.0.7)
+    devise_invitable (2.0.8)
       actionmailer (>= 5.0)
       devise (>= 4.6)
     diff-lcs (1.5.0)
@@ -475,7 +475,7 @@ GEM
     highline (2.1.0)
     html_tokenizer (0.0.7)
     htmlentities (4.3.4)
-    i18n (1.12.0)
+    i18n (1.13.0)
       concurrent-ruby (~> 1.0)
     i18n-tasks (0.9.37)
       activesupport (>= 4.0.2)
@@ -612,8 +612,8 @@ GEM
     paper_trail (12.3.0)
       activerecord (>= 5.2)
       request_store (~> 1.1)
-    parallel (1.22.1)
-    parser (3.2.2.0)
+    parallel (1.23.0)
+    parser (3.2.2.1)
       ast (~> 2.4.1)
     pg (1.1.4)
     pg_search (2.3.6)
@@ -633,7 +633,7 @@ GEM
       nio4r (~> 2.0)
     raabro (1.4.0)
     racc (1.6.2)
-    rack (2.2.6.4)
+    rack (2.2.7)
     rack-attack (6.6.1)
       rack (>= 1.0, < 3)
     rack-cors (1.1.1)
@@ -708,9 +708,9 @@ GEM
     rspec-cells (0.3.8)
       cells (>= 4.0.0, < 6.0.0)
       rspec-rails (>= 3.0.0, < 6.1.0)
-    rspec-core (3.12.1)
+    rspec-core (3.12.2)
       rspec-support (~> 3.12.0)
-    rspec-expectations (3.12.2)
+    rspec-expectations (3.12.3)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.12.0)
     rspec-html-matchers (0.9.4)
@@ -741,7 +741,7 @@ GEM
       rubocop-ast (>= 0.5.0)
       ruby-progressbar (~> 1.7)
       unicode-display_width (>= 1.4.0, < 2.0)
-    rubocop-ast (1.28.0)
+    rubocop-ast (1.28.1)
       parser (>= 3.2.1.0)
     rubocop-rails (2.9.1)
       activesupport (>= 4.2.0)
@@ -769,7 +769,7 @@ GEM
       connection_pool (>= 2.2.5, < 3)
       rack (~> 2.0)
       redis (>= 4.5.0, < 5)
-    sidekiq-cron (1.10.0)
+    sidekiq-cron (1.10.1)
       fugit (~> 1.8)
       globalid (>= 1.0.1)
       sidekiq (>= 6)
@@ -854,7 +854,7 @@ GEM
     wkhtmltopdf-binary (0.12.6.6)
     xpath (3.2.0)
       nokogiri (~> 1.8)
-    zeitwerk (2.6.7)
+    zeitwerk (2.6.8)
 
 PLATFORMS
   x86_64-linux
