@@ -4,20 +4,21 @@ source "https://rubygems.org"
 
 ruby RUBY_VERSION
 
-DECIDIM_VERSION = { git: "https://github.com/decidim/decidim", branch: "release/0.26-stable" }.freeze
+DECIDIM_VERSION = { github: "decidim/decidim", branch: "release/0.26-stable" }.freeze
 
 gem "decidim", DECIDIM_VERSION
 # gem "decidim-conferences", DECIDIM_VERSION
-# gem "decidim-consultations", DECIDIM_VERSION
+gem "decidim-consultations", DECIDIM_VERSION
 # gem "decidim-elections", DECIDIM_VERSION
 # gem "decidim-initiatives", DECIDIM_VERSION
 gem "decidim-templates", DECIDIM_VERSION
 
-gem "decidim-decidim_awesome", git: "https://github.com/decidim-ice/decidim-module-decidim_awesome"
+gem "decidim-decidim_awesome", github: "decidim-ice/decidim-module-decidim_awesome"
 gem "decidim-newsletter_agenda", github: "openpoke/decidim-module-newsletter_agenda"
-gem "decidim-participatory_documents", git: "https://github.com/openpoke/decidim-module-participatory-documents"
-gem "decidim-reporting_proposals", git: "https://github.com/openpoke/decidim-module-reporting-proposals"
-gem "decidim-term_customizer", git: "https://github.com/openpoke/decidim-module-term_customizer"
+gem "decidim-participatory_documents", github: "openpoke/decidim-module-participatory-documents"
+gem "decidim-reporting_proposals", github: "openpoke/decidim-module-reporting-proposals"
+gem "decidim-term_customizer", github: "openpoke/decidim-module-term_customizer"
+gem "decidim-action_delegator", github: "coopdevs/decidim-module-action_delegator"
 
 gem "bootsnap", "~> 1.7"
 
@@ -46,6 +47,6 @@ end
 
 group :production do
   gem "aws-sdk-s3", require: false
-  gem "sidekiq", "<7"
+  gem "sidekiq"
   gem "sidekiq-cron"
 end
