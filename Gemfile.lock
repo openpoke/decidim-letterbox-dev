@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/coopdevs/decidim-module-action_delegator.git
-  revision: 5aee46a73b1d416bb35c14b30a8547b3a81054b9
+  revision: 0e092424def1b52ec1d2bb0a4faf0995effda46b
   specs:
     decidim-action_delegator (0.7.2)
       decidim-admin (>= 0.26.0, < 0.27)
@@ -21,7 +21,7 @@ GIT
 
 GIT
   remote: https://github.com/decidim/decidim.git
-  revision: 0988ce9db54da0485a7ae5094b4b99fa2b153b45
+  revision: e7fc74a9265b9c9eb332b9f09f76aa37eb0ef594
   branch: release/0.26-stable
   specs:
     decidim (0.26.7)
@@ -208,7 +208,7 @@ GIT
 
 GIT
   remote: https://github.com/openpoke/decidim-module-participatory-documents.git
-  revision: 39cfab58c0bb56d37b40ba1837fc50bf89bc94f3
+  revision: 78d146304430b08574e78d58d69d684abfc2d630
   specs:
     decidim-participatory_documents (0.1.0)
       decidim-core (>= 0.25.0, < 0.27)
@@ -303,17 +303,17 @@ GEM
       nokogiri
     ast (2.4.2)
     aws-eventstream (1.2.0)
-    aws-partitions (1.772.0)
-    aws-sdk-core (3.173.1)
+    aws-partitions (1.779.0)
+    aws-sdk-core (3.174.0)
       aws-eventstream (~> 1, >= 1.0.2)
       aws-partitions (~> 1, >= 1.651.0)
       aws-sigv4 (~> 1.5)
       jmespath (~> 1, >= 1.6.1)
-    aws-sdk-kms (1.64.0)
-      aws-sdk-core (~> 3, >= 3.165.0)
+    aws-sdk-kms (1.66.0)
+      aws-sdk-core (~> 3, >= 3.174.0)
       aws-sigv4 (~> 1.1)
-    aws-sdk-s3 (1.122.0)
-      aws-sdk-core (~> 3, >= 3.165.0)
+    aws-sdk-s3 (1.124.0)
+      aws-sdk-core (~> 3, >= 3.174.0)
       aws-sdk-kms (~> 1)
       aws-sigv4 (~> 1.4)
     aws-sigv4 (1.5.2)
@@ -346,7 +346,7 @@ GEM
     browser (2.7.1)
     builder (3.2.4)
     byebug (11.1.3)
-    capybara (3.39.1)
+    capybara (3.39.2)
       addressable
       matrix
       mini_mime (>= 0.1.3)
@@ -355,7 +355,7 @@ GEM
       rack-test (>= 0.6.3)
       regexp_parser (>= 1.5, < 3.0)
       xpath (~> 3.2)
-    carrierwave (2.2.3)
+    carrierwave (2.2.4)
       activemodel (>= 5.0.0)
       activesupport (>= 5.0.0)
       addressable (~> 2.6)
@@ -452,7 +452,7 @@ GEM
     erubi (1.12.0)
     et-orbi (1.2.7)
       tzinfo
-    excon (0.99.0)
+    excon (0.100.0)
     execjs (2.8.1)
     factory_bot (4.11.1)
       activesupport (>= 3.0.0)
@@ -461,7 +461,7 @@ GEM
       railties (>= 3.0.0)
     faker (2.23.0)
       i18n (>= 1.8.11, < 2)
-    faraday (2.7.5)
+    faraday (2.7.6)
       faraday-net_http (>= 2.0, < 3.1)
       ruby2_keywords (>= 0.0.4)
     faraday-net_http (3.0.2)
@@ -499,7 +499,7 @@ GEM
     htmlentities (4.3.4)
     httpi (3.0.1)
       rack
-    i18n (1.13.0)
+    i18n (1.14.1)
       concurrent-ruby (~> 1.0)
     i18n-tasks (0.9.37)
       activesupport (>= 4.0.2)
@@ -522,7 +522,7 @@ GEM
       rails (>= 3.2.0)
     jmespath (1.6.2)
     json (2.6.3)
-    jwt (2.7.0)
+    jwt (2.7.1)
     kaminari (1.2.2)
       activesupport (>= 4.1.0)
       kaminari-actionview (= 1.2.2)
@@ -582,7 +582,7 @@ GEM
     msgpack (1.7.1)
     multi_xml (0.6.0)
     mustache (1.1.1)
-    net-imap (0.3.4)
+    net-imap (0.3.6)
       date
       net-protocol
     net-pop (0.1.2)
@@ -638,8 +638,9 @@ GEM
       activerecord (>= 5.2)
       request_store (~> 1.1)
     parallel (1.23.0)
-    parser (3.2.2.1)
+    parser (3.2.2.3)
       ast (~> 2.4.1)
+      racc
     pg (1.1.4)
     pg_search (2.3.6)
       activerecord (>= 5.2)
@@ -657,7 +658,7 @@ GEM
     puma (5.6.5)
       nio4r (~> 2.0)
     raabro (1.4.0)
-    racc (1.6.2)
+    racc (1.7.1)
     rack (2.2.7)
     rack-attack (6.6.1)
       rack (>= 1.0, < 3)
@@ -721,7 +722,7 @@ GEM
     redis (4.8.1)
     redis-client (0.14.1)
       connection_pool
-    regexp_parser (2.8.0)
+    regexp_parser (2.8.1)
     request_store (1.5.1)
       rack (>= 1.4)
     responders (3.1.0)
@@ -768,7 +769,7 @@ GEM
       rubocop-ast (>= 0.5.0)
       ruby-progressbar (~> 1.7)
       unicode-display_width (>= 1.4.0, < 2.0)
-    rubocop-ast (1.28.1)
+    rubocop-ast (1.29.0)
       parser (>= 3.2.1.0)
     rubocop-rails (2.9.1)
       activesupport (>= 4.2.0)
@@ -841,10 +842,10 @@ GEM
       unicode-display_width (>= 1.1.1, < 3)
     thor (1.2.2)
     thread_safe (0.3.6)
-    tilt (2.1.0)
+    tilt (2.2.0)
     timeout (0.3.2)
     tomlrb (2.0.3)
-    twilio-ruby (6.0.1)
+    twilio-ruby (6.0.2)
       faraday (>= 0.9, < 3.0)
       jwt (>= 1.5, < 3.0)
       nokogiri (>= 1.6, < 2.0)
@@ -855,7 +856,7 @@ GEM
     valid_email2 (2.3.1)
       activemodel (>= 3.2)
       mail (~> 2.5)
-    version_gem (1.1.2)
+    version_gem (1.1.3)
     virtus (1.0.5)
       axiom-types (~> 0.1)
       coercible (~> 1.0)
