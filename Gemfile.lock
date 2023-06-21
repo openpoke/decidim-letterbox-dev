@@ -21,7 +21,7 @@ GIT
 
 GIT
   remote: https://github.com/decidim/decidim.git
-  revision: e7fc74a9265b9c9eb332b9f09f76aa37eb0ef594
+  revision: efa22da9450baea341d5ddcab720adfe180e973a
   branch: release/0.26-stable
   specs:
     decidim (0.26.7)
@@ -208,7 +208,7 @@ GIT
 
 GIT
   remote: https://github.com/openpoke/decidim-module-participatory-documents.git
-  revision: 5673dd8275ada1881c63fa4cb61551959897a39a
+  revision: e92502b907bdbbd1af669a1da34b7e4c440f2889
   branch: fix-boxing-bugs
   specs:
     decidim-participatory_documents (0.1.0)
@@ -304,16 +304,16 @@ GEM
       nokogiri
     ast (2.4.2)
     aws-eventstream (1.2.0)
-    aws-partitions (1.779.0)
-    aws-sdk-core (3.174.0)
+    aws-partitions (1.781.0)
+    aws-sdk-core (3.175.0)
       aws-eventstream (~> 1, >= 1.0.2)
       aws-partitions (~> 1, >= 1.651.0)
       aws-sigv4 (~> 1.5)
       jmespath (~> 1, >= 1.6.1)
-    aws-sdk-kms (1.66.0)
+    aws-sdk-kms (1.67.0)
       aws-sdk-core (~> 3, >= 3.174.0)
       aws-sigv4 (~> 1.1)
-    aws-sdk-s3 (1.124.0)
+    aws-sdk-s3 (1.126.0)
       aws-sdk-core (~> 3, >= 3.174.0)
       aws-sdk-kms (~> 1)
       aws-sigv4 (~> 1.4)
@@ -462,7 +462,7 @@ GEM
       railties (>= 3.0.0)
     faker (2.23.0)
       i18n (>= 1.8.11, < 2)
-    faraday (2.7.6)
+    faraday (2.7.7)
       faraday-net_http (>= 2.0, < 3.1)
       ruby2_keywords (>= 0.0.4)
     faraday-net_http (3.0.2)
@@ -574,7 +574,7 @@ GEM
     mime-types-data (3.2023.0218.1)
     mini_magick (4.12.0)
     mini_mime (1.1.2)
-    minitest (5.18.0)
+    minitest (5.18.1)
     mixlib-cli (2.1.8)
     mixlib-config (3.0.27)
       tomlrb
@@ -656,7 +656,7 @@ GEM
       net-smtp
       premailer (~> 1.7, >= 1.7.9)
     public_suffix (5.0.1)
-    puma (5.6.5)
+    puma (5.6.6)
       nio4r (~> 2.0)
     raabro (1.4.0)
     racc (1.7.1)
@@ -803,7 +803,7 @@ GEM
       rubyzip (>= 1.2.2)
     semantic_range (3.0.0)
     seven_zip_ruby (1.3.0)
-    sidekiq (7.1.1)
+    sidekiq (7.1.2)
       concurrent-ruby (< 2)
       connection_pool (>= 2.3.0)
       rack (>= 2.2.4)
@@ -846,7 +846,7 @@ GEM
     tilt (2.2.0)
     timeout (0.3.2)
     tomlrb (2.0.3)
-    twilio-ruby (6.0.2)
+    twilio-ruby (6.1.0)
       faraday (>= 0.9, < 3.0)
       jwt (>= 1.5, < 3.0)
       nokogiri (>= 1.6, < 2.0)
