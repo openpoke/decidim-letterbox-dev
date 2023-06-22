@@ -208,7 +208,7 @@ GIT
 
 GIT
   remote: https://github.com/openpoke/decidim-module-participatory-documents.git
-  revision: af99cd07896e00ab9aebdca900a50e8bc0cff6c7
+  revision: fcdf41636b908e2104f7ef90a2a77e2a9aa8c965
   branch: fix-boxing-bugs
   specs:
     decidim-participatory_documents (0.1.0)
