@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_05_31_153744) do
+ActiveRecord::Schema.define(version: 2023_06_22_170001) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "ltree"
@@ -1171,6 +1171,8 @@ ActiveRecord::Schema.define(version: 2023_05_31_153744) do
     t.integer "page_number", default: 1
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "position", default: 0, null: false
+    t.index ["position"], name: "index_decidim_participatory_documents_annotations_on_position"
     t.index ["section_id"], name: "decidim_pd_annotation_section"
   end
 
@@ -1196,7 +1198,9 @@ ActiveRecord::Schema.define(version: 2023_05_31_153744) do
     t.string "state"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "position", default: 0, null: false
     t.index ["document_id"], name: "decidim_pd_section_document"
+    t.index ["position"], name: "index_decidim_participatory_documents_sections_on_position"
   end
 
   create_table "decidim_participatory_documents_suggestion_notes", force: :cascade do |t|
