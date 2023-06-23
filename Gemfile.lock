@@ -208,7 +208,7 @@ GIT
 
 GIT
   remote: https://github.com/openpoke/decidim-module-participatory-documents.git
-  revision: fcdf41636b908e2104f7ef90a2a77e2a9aa8c965
+  revision: 4baf7358803a9425251cf41e10ad9076662ff02b
   branch: fix-boxing-bugs
   specs:
     decidim-participatory_documents (0.1.0)
@@ -331,7 +331,7 @@ GEM
       ice_nine (~> 0.11.0)
       thread_safe (~> 0.3, >= 0.3.1)
     batch-loader (1.5.0)
-    bcrypt (3.1.18)
+    bcrypt (3.1.19)
     better_html (1.0.16)
       actionview (>= 4.0)
       activesupport (>= 4.0)
@@ -844,7 +844,7 @@ GEM
     thor (1.2.2)
     thread_safe (0.3.6)
     tilt (2.2.0)
-    timeout (0.3.2)
+    timeout (0.4.0)
     tomlrb (2.0.3)
     twilio-ruby (6.1.0)
       faraday (>= 0.9, < 3.0)
