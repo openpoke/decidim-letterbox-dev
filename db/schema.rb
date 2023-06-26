@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_06_22_170001) do
+ActiveRecord::Schema.define(version: 2023_06_26_135402) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "ltree"
@@ -1187,6 +1187,7 @@ ActiveRecord::Schema.define(version: 2023_06_22_170001) do
     t.bigint "decidim_user_group_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.datetime "published_at"
     t.index ["decidim_author_type", "decidim_author_id"], name: "decidim_pd_document_author_id_and_type"
     t.index ["decidim_component_id"], name: "decidim_pd_document_decidim_component"
     t.index ["decidim_user_group_id"], name: "decidim_pd_document_user_group"
