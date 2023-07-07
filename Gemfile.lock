@@ -16,6 +16,14 @@ GIT
       decidim-core (~> 0.27.0)
 
 GIT
+  remote: https://github.com/openpoke/decidim-module-participatory-documents.git
+  revision: eeab17206ec39f09483d9b0422bfa5cde36c1db3
+  branch: upgrade-0.27
+  specs:
+    decidim-participatory_documents (0.2.0)
+      decidim-core (>= 0.27.0, < 0.28)
+
+GIT
   remote: https://github.com/openpoke/decidim-module-reporting-proposals.git
   revision: 2407886f5c6f66556518493ae8898bbeba7c0ff9
   branch: upgrade-0.27
@@ -99,17 +107,17 @@ GEM
       public_suffix (>= 2.0.2, < 6.0)
     ast (2.4.2)
     aws-eventstream (1.2.0)
-    aws-partitions (1.783.0)
-    aws-sdk-core (3.176.1)
+    aws-partitions (1.784.0)
+    aws-sdk-core (3.177.0)
       aws-eventstream (~> 1, >= 1.0.2)
       aws-partitions (~> 1, >= 1.651.0)
       aws-sigv4 (~> 1.5)
       jmespath (~> 1, >= 1.6.1)
-    aws-sdk-kms (1.68.0)
-      aws-sdk-core (~> 3, >= 3.176.0)
+    aws-sdk-kms (1.70.0)
+      aws-sdk-core (~> 3, >= 3.177.0)
       aws-sigv4 (~> 1.1)
-    aws-sdk-s3 (1.127.0)
-      aws-sdk-core (~> 3, >= 3.176.0)
+    aws-sdk-s3 (1.128.0)
+      aws-sdk-core (~> 3, >= 3.177.0)
       aws-sdk-kms (~> 1)
       aws-sigv4 (~> 1.6)
     aws-sigv4 (1.6.0)
@@ -429,7 +437,7 @@ GEM
       railties (>= 3.0.0)
     faker (2.23.0)
       i18n (>= 1.8.11, < 2)
-    faraday (2.7.9)
+    faraday (2.7.10)
       faraday-net_http (>= 2.0, < 3.1)
       ruby2_keywords (>= 0.0.4)
     faraday-net_http (3.0.2)
@@ -454,7 +462,7 @@ GEM
       et-orbi (~> 1, >= 1.2.7)
       raabro (~> 1.4)
     gemoji (3.0.1)
-    geocoder (1.8.1)
+    geocoder (1.8.2)
     globalid (1.1.0)
       activesupport (>= 5.0)
     graphql (1.12.24)
@@ -878,6 +886,7 @@ DEPENDENCIES
   decidim-decidim_awesome!
   decidim-dev (= 0.27.3)
   decidim-microsoft
+  decidim-participatory_documents!
   decidim-reporting_proposals!
   decidim-templates (= 0.27.3)
   decidim-term_customizer!
