@@ -16,7 +16,7 @@ gem "decidim-templates", DECIDIM_VERSION
 
 gem "decidim-decidim_awesome", github: "decidim-ice/decidim-module-decidim_awesome"
 # gem "decidim-newsletter_agenda", github: "openpoke/decidim-module-newsletter_agenda"
-gem "decidim-participatory_documents", github: "openpoke/decidim-module-participatory-documents"
+gem "decidim-participatory_documents", github: "openpoke/decidim-module-participatory-documents", branch: "export-my-suggestions"
 gem "decidim-reporting_proposals", github: "openpoke/decidim-module-reporting-proposals"
 gem "decidim-term_customizer", github: "mainio/decidim-module-term_customizer"
 # gem "decidim-action_delegator", github: "coopdevs/decidim-module-action_delegator"
