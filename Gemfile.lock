@@ -16,6 +16,16 @@ GIT
       decidim-core (~> 0.27.0)
 
 GIT
+  remote: https://github.com/openpoke/decidim-module-newsletter_agenda.git
+  revision: da114883e87462e4158eb83560732a01c30cef22
+  branch: newsletter-theme-new
+  specs:
+    decidim-newsletter_agenda (1.1.0)
+      date_range_formatter
+      decidim-admin (>= 0.27.0, < 0.28)
+      decidim-core (>= 0.27.0, < 0.28)
+
+GIT
   remote: https://github.com/openpoke/decidim-module-participatory-documents.git
   revision: b274371ae6fdfaa532ef3eab779be91ee734e336
   specs:
@@ -198,6 +208,8 @@ GEM
     css_parser (1.14.0)
       addressable
     date (3.3.3)
+    date_range_formatter (0.1.2)
+      activesupport (>= 3.2.0)
     date_validator (0.12.0)
       activemodel (>= 3)
       activesupport (>= 3)
@@ -884,6 +896,7 @@ DEPENDENCIES
   decidim-decidim_awesome!
   decidim-dev (= 0.27.3)
   decidim-microsoft
+  decidim-newsletter_agenda!
   decidim-participatory_documents!
   decidim-reporting_proposals!
   decidim-templates (= 0.27.3)
