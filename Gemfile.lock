@@ -17,7 +17,7 @@ GIT
 
 GIT
   remote: https://github.com/openpoke/decidim-module-newsletter_agenda.git
-  revision: da114883e87462e4158eb83560732a01c30cef22
+  revision: ab2876aab542039d944e664b12eb6e08ffd1a056
   branch: newsletter-theme-new
   specs:
     decidim-newsletter_agenda (1.1.0)
@@ -586,6 +586,8 @@ GEM
     net-smtp (0.3.3)
       net-protocol
     nio4r (2.5.9)
+    nokogiri (1.14.5-x86_64-darwin)
+      racc (~> 1.4)
     nokogiri (1.14.5-x86_64-linux)
       racc (~> 1.4)
     oauth (1.1.0)
@@ -884,6 +886,7 @@ GEM
     zeitwerk (2.6.8)
 
 PLATFORMS
+  x86_64-darwin-22
   x86_64-linux
 
 DEPENDENCIES
