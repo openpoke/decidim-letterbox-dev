@@ -18,7 +18,7 @@ GIT
 GIT
   remote: https://github.com/openpoke/decidim-module-newsletter_agenda.git
   revision: ae243d7d30036a3ebe75bbbc557b52155c3e0728
-  branch: newsletter-theme-new
+  branch: change-capitalitat-styles
   specs:
     decidim-newsletter_agenda (1.1.0)
       date_range_formatter
