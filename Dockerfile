@@ -1,4 +1,4 @@
-FROM ruby:3.0 AS builder
+FROM ruby:3.0.6 AS builder
 
 RUN NODE_MAJOR=16 && \
     apt-get update && apt-get upgrade -y && apt-get install -y ca-certificates curl gnupg && \
@@ -79,7 +79,7 @@ RUN mv config/credentials.bak config/credentials 2>/dev/null || true
 RUN rm -rf node_modules tmp/cache vendor/bundle test spec app/packs .git
 
 # This image is for production env only
-FROM ruby:3.0-slim AS final
+FROM ruby:3.0.6-slim AS final
 
 RUN apt-get update && \
     apt-get install -y postgresql-client \
