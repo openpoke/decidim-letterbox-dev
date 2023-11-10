@@ -5,17 +5,11 @@ require_relative "boot"
 # require "rails/all"
 require "decidim/rails"
 require "action_cable/engine"
-require "rails/test_unit/railtie"
+# require "rails/test_unit/railtie"
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
-
-module Decidim
-  def self.module_installed?(mod)
-    Gem.loaded_specs.has_key?("decidim-#{mod}")
-  end
-end
 
 module DecidimLetterboxDev
   class Application < Rails::Application
