@@ -1,6 +1,7 @@
 GIT
   remote: https://github.com/decidim-ice/decidim-module-decidim_awesome.git
-  revision: af40e0ce83f8db0a2a373b19ace3146dfd489465
+  revision: 9c9ebf285b55d1b0960d64fcfa79e0cc462cfcbc
+  branch: fix-head-override
   specs:
     decidim-decidim_awesome (0.10.1)
       decidim-admin (>= 0.26.0, < 0.28)
