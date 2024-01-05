@@ -14,7 +14,7 @@ gem "decidim-consultations", DECIDIM_VERSION
 gem "decidim-templates", DECIDIM_VERSION
 
 gem "decidim-decidim_awesome", github: "decidim-ice/decidim-module-decidim_awesome"
-gem "decidim-newsletter_agenda", github: "openpoke/decidim-module-newsletter_agenda", ref: "16ad904fc1edc32189cf2936ce3401e17b0fbbb7"
+gem "decidim-newsletter_agenda", github: "openpoke/decidim-module-newsletter_agenda", ref: "1009b612821e69b7cd3760edddbd384d8babad01"
 gem "decidim-participatory_documents", github: "openpoke/decidim-module-participatory-documents"
 gem "decidim-reporting_proposals", github: "openpoke/decidim-module-reporting-proposals"
 gem "decidim-term_customizer", github: "mainio/decidim-module-term_customizer", branch: "master"
