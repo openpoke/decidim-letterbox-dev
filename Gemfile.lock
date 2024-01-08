@@ -19,8 +19,8 @@ GIT
 
 GIT
   remote: https://github.com/openpoke/decidim-module-newsletter_agenda.git
-  revision: 5a8e12bcd3b6d5fa48b056d747ae881d1bf7ad22
-  ref: 5a8e12bcd3b6d5fa48b056d747ae881d1bf7ad22
+  revision: 084655e0bb9e3d0b6cbd06472873f02600160fbe
+  ref: 084655e0bb9e3d0b6cbd06472873f02600160fbe
   specs:
     decidim-newsletter_agenda (1.1.0)
       date_range_formatter
