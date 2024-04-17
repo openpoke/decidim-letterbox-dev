@@ -36,6 +36,7 @@ RUN gem install bundler:$(grep -A 1 'BUNDLED WITH' Gemfile.lock | tail -n 1 | xa
     find /usr/local/bundle/ -name ".git" -exec rm -rf {} + && \
     find /usr/local/bundle/ -name ".github" -exec rm -rf {} + && \
     # whkhtmltopdf has binaries for all platforms, we don't need them once uncompressed
+    gem install wkhtmltopdf-binary && \
     rm -rf /usr/local/bundle/gems/wkhtmltopdf-binary-*/bin/*.gz && \
     # Remove additional unneded decidim files
     find /usr/local/bundle/ -name "decidim_app-design" -exec rm -rf {} + && \
