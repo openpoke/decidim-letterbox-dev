@@ -19,7 +19,7 @@ gem "decidim-participatory_documents", github: "openpoke/decidim-module-particip
 gem "decidim-reporting_proposals", github: "openpoke/decidim-module-reporting-proposals"
 gem "decidim-term_customizer", github: "mainio/decidim-module-term_customizer", branch: "release/0.27-stable"
 # gem "decidim-action_delegator", github: "coopdevs/decidim-module-action_delegator"
-gem "decidim-anonymous_codes", github: "openpoke/decidim-module-anonymous_codes"
+gem "decidim-anonymous_codes", github: "openpoke/decidim-module-anonymous_codes", branch: "feat/generate_tokens"
 
 gem "bootsnap", "~> 1.7"
 
