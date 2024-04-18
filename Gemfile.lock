@@ -19,7 +19,7 @@ GIT
 
 GIT
   remote: https://github.com/openpoke/decidim-module-anonymous_codes.git
-  revision: 11aa04377030ff595d71415a650b3c59149d9b37
+  revision: 7fbad3d2479e34350fada6087a37c9486a61a250
   branch: feat/generate_tokens
   specs:
     decidim-anonymous_codes (1.0)
