@@ -19,8 +19,7 @@ GIT
 
 GIT
   remote: https://github.com/openpoke/decidim-module-anonymous_codes.git
-  revision: 7fbad3d2479e34350fada6087a37c9486a61a250
-  branch: feat/generate_tokens
+  revision: e6f84796e287d211d6118dda8ddc43d40942d80d
   specs:
     decidim-anonymous_codes (1.0)
       decidim-admin (>= 0.27.0, < 0.28)
@@ -304,8 +303,8 @@ GEM
       public_suffix (>= 2.0.2, < 6.0)
     ast (2.4.2)
     aws-eventstream (1.3.0)
-    aws-partitions (1.914.0)
-    aws-sdk-core (3.192.0)
+    aws-partitions (1.918.0)
+    aws-sdk-core (3.192.1)
       aws-eventstream (~> 1, >= 1.3.0)
       aws-partitions (~> 1, >= 1.651.0)
       aws-sigv4 (~> 1.8)
@@ -837,7 +836,7 @@ GEM
       version_gem (~> 1.1, >= 1.1.1)
     social-share-button (1.2.4)
       coffee-rails
-    spring (4.2.0)
+    spring (4.2.1)
     spring-watcher-listen (2.1.0)
       listen (>= 2.7, < 4.0)
       spring (>= 4)
