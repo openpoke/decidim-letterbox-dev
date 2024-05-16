@@ -1,15 +1,14 @@
 FROM ruby:3.0.6 AS builder
 
-RUN NODE_MAJOR=16 && \
-    apt-get update && apt-get upgrade -y && apt-get install -y ca-certificates curl gnupg && \
+RUN apt-get update && apt-get upgrade -y && apt-get install -y ca-certificates curl gnupg && \
     mkdir -p /etc/apt/keyrings && \
-    curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg && \
-    echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_$NODE_MAJOR.x nodistro main" | tee /etc/apt/sources.list.d/nodesource.list && \
+    curl -fsSL https://deb.nodesource.com/setup_16.x | bash - && \
     curl -sL https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - && \
     echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list && \
     apt-get update && apt-get install -y nodejs yarn \
     build-essential \
     postgresql-client \
+    p7zip-full \
     libpq-dev && \
     apt-get clean
 
@@ -39,6 +38,7 @@ RUN gem install bundler:$(grep -A 1 'BUNDLED WITH' Gemfile.lock | tail -n 1 | xa
     gem install wkhtmltopdf-binary && \
     wkhtmltopdf --version && \
     rm -rf /usr/local/bundle/gems/wkhtmltopdf-binary-*/bin/*.gz && \
+    rm -f /usr/local/bundle/gems/seven_zip_ruby-1.3.0/lib/seven_zip_ruby/*.dll && \
     # Remove additional unneded decidim files
     find /usr/local/bundle/ -name "decidim_app-design" -exec rm -rf {} + && \
     find /usr/local/bundle/ -name "spec" -exec rm -rf {} +
@@ -83,10 +83,14 @@ RUN rm -rf node_modules tmp/cache vendor/bundle test spec app/packs .git
 # This image is for production env only
 FROM ruby:3.0.6-slim AS final
 
-RUN apt-get update && \
-    apt-get install -y postgresql-client \
+RUN apt-get update && apt-get upgrade -y && apt-get install -y ca-certificates curl gnupg && \
+    mkdir -p /etc/apt/keyrings && \
+    curl -fsSL https://deb.nodesource.com/setup_16.x | bash - && \
+    apt-get update && apt-get install -y nodejs \
+    postgresql-client \
     imagemagick \
     curl \
+    p7zip-full \
     supervisor && \
     apt-get clean
 
@@ -117,11 +121,15 @@ COPY --from=builder --chown=app:app /usr/local/bundle/ /usr/local/bundle/
 COPY --from=builder --chown=app:app /app /app
 # add custom pdfjs from public folder
 COPY ./public/pdfjs /app/public/pdfjs
+# Install only the vocdoni sdk for the node backend
+RUN mv package.json package-assets.json && \
+    mv package-lock.json package-assets-lock.json
+COPY ./package-vocdoni.json /app/package.json
+RUN npm install --omit=dev 
 
 USER app
 HEALTHCHECK --interval=1m --timeout=5s --start-period=30s \
     CMD (curl -sSH "Content-Type: application/json" -d '{"query": "{ decidim { version } }"}' http://localhost:3000/api) || exit 1
-
 
 ENTRYPOINT ["/app/entrypoint.sh"]
 CMD ["/usr/bin/supervisord"]

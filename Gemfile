@@ -20,6 +20,7 @@ gem "decidim-reporting_proposals", "~> 0.5.2"
 gem "decidim-term_customizer", github: "mainio/decidim-module-term_customizer", branch: "release/0.27-stable"
 # gem "decidim-action_delegator", github: "coopdevs/decidim-module-action_delegator"
 gem "decidim-anonymous_codes", github: "openpoke/decidim-module-anonymous_codes"
+gem "decidim-vocdoni", github: "decidim-vocdoni/decidim-module-vocdoni", branch: "release/0.27-stable"
 
 gem "bootsnap", "~> 1.7"
 

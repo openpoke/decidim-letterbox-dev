@@ -1,0 +1,8 @@
+{
+  "name": "app",
+  "private": true,
+  "dependencies": {
+    "@vocdoni/sdk": "~0.8.0"
+  },
+  "version": "0.1.0"
+}

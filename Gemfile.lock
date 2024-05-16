@@ -9,6 +9,15 @@ GIT
       sassc (~> 2.3)
 
 GIT
+  remote: https://github.com/decidim-vocdoni/decidim-module-vocdoni.git
+  revision: 7b49435351f2742900ee1c99448af178dbc52853
+  branch: release/0.27-stable
+  specs:
+    decidim-vocdoni (1.0)
+      decidim-core (>= 0.27)
+      node-runner (~> 1.1)
+
+GIT
   remote: https://github.com/mainio/decidim-module-term_customizer.git
   revision: abbf0c69e1bcaafebc5aa4f8da22fdb64ce62149
   branch: release/0.27-stable
@@ -608,6 +617,7 @@ GEM
     net-smtp (0.5.0)
       net-protocol
     nio4r (2.7.1)
+    node-runner (1.2.0)
     nokogiri (1.16.4-x86_64-linux)
       racc (~> 1.4)
     oauth (1.1.0)
@@ -925,6 +935,7 @@ DEPENDENCIES
   decidim-reporting_proposals (~> 0.5.2)
   decidim-templates!
   decidim-term_customizer!
+  decidim-vocdoni!
   faker (~> 2.14)
   letter_opener_web
   listen
