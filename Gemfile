@@ -4,7 +4,7 @@ source "https://rubygems.org"
 
 ruby RUBY_VERSION
 
-DECIDIM_VERSION = { github: "openpoke/decidim", branch: "0.27-backports" }.freeze
+DECIDIM_VERSION = { github: "openpoke/decidim", branch: "backport/0.27/feature/share_unpublish_components_with_tokens" }.freeze
 
 gem "decidim", DECIDIM_VERSION
 # gem "decidim-conferences", DECIDIM_VERSION
@@ -13,7 +13,7 @@ gem "decidim-consultations", DECIDIM_VERSION
 # gem "decidim-initiatives", DECIDIM_VERSION
 gem "decidim-templates", DECIDIM_VERSION
 
-gem "decidim-decidim_awesome", github: "decidim-ice/decidim-module-decidim_awesome"
+gem "decidim-decidim_awesome", github: "decidim-ice/decidim-module-decidim_awesome", branch: "release/0.27-stable"
 gem "decidim-newsletter_agenda", github: "openpoke/decidim-module-newsletter_agenda"
 gem "decidim-participatory_documents", github: "openpoke/decidim-module-participatory-documents"
 gem "decidim-reporting_proposals", "~> 0.5.2"
