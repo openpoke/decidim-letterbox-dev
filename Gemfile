@@ -4,7 +4,7 @@ source "https://rubygems.org"
 
 ruby RUBY_VERSION
 
-DECIDIM_VERSION = { github: "openpoke/decidim", branch: "backport/0.27/feature/share_unpublish_components_with_tokens" }.freeze
+DECIDIM_VERSION = { github: "openpoke/decidim", branch: "backport/0.27/feature/meeting-reminder-customization" }.freeze
 
 gem "decidim", DECIDIM_VERSION
 # gem "decidim-conferences", DECIDIM_VERSION

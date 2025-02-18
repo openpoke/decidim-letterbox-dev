@@ -6,6 +6,7 @@ class MigrateProposalReportsDataToReports < ActiveRecord::Migration[5.0]
   module Decidim
     module Proposals
       class ProposalReport < ApplicationRecord
+        self.table_name = :decidim_proposals_proposal_reports
         belongs_to :user, foreign_key: 'decidim_user_id', class_name: 'Decidim::User'
         belongs_to :proposal, foreign_key: 'decidim_proposal_id', class_name: 'Decidim::Proposals::Proposal'
       end

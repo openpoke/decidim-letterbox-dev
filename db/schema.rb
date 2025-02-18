@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2024_11_06_170225) do
+ActiveRecord::Schema.define(version: 2025_02_18_104532) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "ltree"
@@ -1009,6 +1009,9 @@ ActiveRecord::Schema.define(version: 2024_11_06_170225) do
     t.string "state"
     t.integer "iframe_access_level", default: 0
     t.integer "iframe_embed_type", default: 0
+    t.boolean "reminder_enabled"
+    t.integer "send_reminders_before_hours"
+    t.jsonb "reminder_message_custom_content"
     t.index ["decidim_author_id", "decidim_author_type"], name: "index_decidim_meetings_meetings_on_author"
     t.index ["decidim_author_id"], name: "index_decidim_meetings_meetings_on_decidim_author_id"
     t.index ["decidim_component_id"], name: "index_decidim_meetings_meetings_on_decidim_component_id"
@@ -1205,8 +1208,6 @@ ActiveRecord::Schema.define(version: 2024_11_06_170225) do
     t.jsonb "welcome_notification_subject"
     t.jsonb "welcome_notification_body"
     t.integer "users_registration_mode", default: 0, null: false
-    t.string "id_documents_methods", default: ["online"], array: true
-    t.jsonb "id_documents_explanation_text", default: {}
     t.boolean "user_groups_enabled", default: false, null: false
     t.jsonb "smtp_settings"
     t.jsonb "colors", default: {}
@@ -1221,6 +1222,8 @@ ActiveRecord::Schema.define(version: 2024_11_06_170225) do
     t.string "machine_translation_display_priority", default: "original", null: false
     t.string "external_domain_whitelist", default: [], array: true
     t.boolean "enable_participatory_space_filters", default: true
+    t.jsonb "id_documents_explanation_text", default: {}
+    t.string "id_documents_methods", default: ["online"], array: true
     t.index ["host"], name: "index_decidim_organizations_on_host", unique: true
     t.index ["name"], name: "index_decidim_organizations_on_name", unique: true
   end
